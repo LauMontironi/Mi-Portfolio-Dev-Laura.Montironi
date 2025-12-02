@@ -25,3 +25,4 @@ function toggleSection(section) {
 skills.addEventListener('click', () => toggleSection(skillDiv));
 study.addEventListener('click', () => toggleSection(studyDiv));
 contact.addEventListener('click', () => toggleSection(contactDiv));
+
