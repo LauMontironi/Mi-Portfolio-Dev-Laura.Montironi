@@ -169,6 +169,7 @@ seccion-texto{
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+    width: 90%;
 }
 
 .overlay p{
@@ -317,17 +318,32 @@ footer{
 }
 
 @media screen and (max-width: 470px) {
+    .overlay{
+        width: 95%;
+        padding: 5px;
+    }
     .overlay p {
-        font-size: 1rem;
-        margin-bottom: 0.5rem;
+        font-size: 0.9rem;
+        line-height: 1.2;
+        margin-bottom: 5px !important;
+        white-space: normal;
     }
 
-    .iconos-contenedor {
-        gap: 0.75rem;
+        .overlay i {
+            font-size: 30px;
+            margin: 5px;
+        }
+    
+        .iconos-contenedor {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+    
 
-    }
+        .iconos-contenedor a {
+            font-size: 1.5rem;
 
-    .iconos-contenedor a {
-        font-size: 1.75rem;
-    }
+        }
 }
