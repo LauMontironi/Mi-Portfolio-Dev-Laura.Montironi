@@ -6,52 +6,53 @@
             Una solución integral para la organización familiar que conecta una arquitectura robusta en
             <strong>FastAPI</strong> con una interfaz dinámica en <strong>Angular 18</strong>.
         </p>
-        <div class="d-flex justify-content-center gap-3 mt-4">
-            <a href="https://family-scheduler-front.netlify.app" target="_blank" class="btn btn-dark">
+        <div class="d-flex flex-column flex-md-row justify-content-center gap-3 mt-4 px-3">
+            <a href="https://family-scheduler-front.netlify.app" target="_blank" class="btn btn-dark px-4">
                 <i class="bi bi-rocket-takeoff"></i> Live Demo
             </a>
-            <a href="https://github.com/LauMontironi/Family-scheduler-project-Backend" target="_blank" class="btn btn-outline-dark">
-                <i class="bi bi-github"></i> View Code Backend
+            <a href="https://github.com/LauMontironi/Family-scheduler-project-Backend" target="_blank"
+                class="btn btn-outline-dark px-4">
+                <i class="bi bi-github"></i> Backend Code
             </a>
-            <a href="https://github.com/LauMontironi/Family-scheduler-project-Frontend" target="_blank" class="btn btn-outline-dark">
-                <i class="bi bi-github"></i> View Code Frontend
+            <a href="https://github.com/LauMontironi/Family-scheduler-project-Frontend" target="_blank"
+                class="btn btn-outline-dark px-4">
+                <i class="bi bi-github"></i> Frontend Code
             </a>
         </div>
     </header>
 
-    <section class="row mb-5 align-items-center">
+    <section class="row mb-5 align-items-center g-4 text-center text-md-start">
         <div class="col-md-6">
             <h2 class="fw-bold">El Concepto</h2>
-            <p>El objetivo era crear una plataforma donde los padres pudieran gestionar no solo el calendario, sino
-                también los perfiles de sus hijos y miembros de la familia en un entorno seguro y privado.</p>
-            <ul class="list-unstyled">
-                <li><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Frontend:</strong> Angular con
-                    Signals.</li>
-                <li><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Backend:</strong> FastAPI y
-                    Pydantic.</li>
-                <li><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Seguridad:</strong> JWT con Argon2.
+            <p>Gestiona perfiles familiares y calendarios en un entorno seguro y privado.</p>
+            <ul class="list-unstyled d-inline-block text-start">
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Frontend:</strong> Angular &
+                    Signals</li>
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Backend:</strong> FastAPI &
+                    Pydantic</li>
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Seguridad:</strong> JWT & Argon2
                 </li>
-                <li><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Base de Datos:</strong> MySQL 8.
-                </li>
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i><strong>DB:</strong> MySQL 8</li>
             </ul>
         </div>
         <div class="col-md-6">
             <div class="card shadow-sm border-0">
-                <img src="assets/projects/family-app-preview.jpg" class="card-img-top rounded shadow" alt="Landing Page">
-                <div class="card-body p-2 text-center text-muted small">Capture: Landing page principal del proyecto
-                </div>
+                <img src="assets/projects/family-app-preview.jpg" class="card-img-top rounded shadow"
+                    alt="Landing Preview">
             </div>
         </div>
     </section>
 
     <section class="mb-5">
-        <h2 class="fw-bold mb-4">Arquitectura Técnica</h2>
+        <h2 class="fw-bold mb-4 text-center">Arquitectura Técnica</h2>
         <div class="card border-dark shadow-sm">
-            <div class="card-header bg-dark text-white fw-bold">REST API Endpoints & Logic</div>
-            <div class="card-body">
-                <div class="table-responsive">
-                    <table class="table table-hover align-middle">
-                        <thead class="table-light">
+            <div class="card-header bg-dark text-white text-center fw-bold py-3">
+                REST API Endpoints & Logic
+            </div>
+            <div class="card-body p-0 p-md-3">
+                <div class="table-responsive-custom">
+                    <table class="table align-middle mb-0">
+                        <thead>
                             <tr>
                                 <th>Módulo</th>
                                 <th>Método</th>
@@ -61,22 +62,22 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td><strong>Auth</strong></td>
-                                <td><span class="badge bg-success">POST</span></td>
-                                <td><code>/auth/login</code></td>
-                                <td>Validación de Hash y JWT.</td>
+                                <td data-label="Módulo"><strong>Auth</strong></td>
+                                <td data-label="Método"><span class="badge bg-success">POST</span></td>
+                                <td data-label="Endpoint"><code>/auth/login</code></td>
+                                <td data-label="Lógica">JWT Auth</td>
                             </tr>
                             <tr>
-                                <td><strong>Families</strong></td>
-                                <td><span class="badge bg-primary">GET</span></td>
-                                <td><code>/families/my</code></td>
-                                <td>Filtro de seguridad por pertenencia.</td>
+                                <td data-label="Módulo"><strong>Families</strong></td>
+                                <td data-label="Método"><span class="badge bg-primary">GET</span></td>
+                                <td data-label="Endpoint"><code>/families/my</code></td>
+                                <td data-label="Lógica">Filtro ID</td>
                             </tr>
                             <tr>
-                                <td><strong>Events</strong></td>
-                                <td><span class="badge bg-warning text-dark">POST</span></td>
-                                <td><code>/events/&#123;child_id&#125;</code></td>
-                                <td>Vinculación de eventos a hijos.</td>
+                                <td data-label="Módulo"><strong>Events</strong></td>
+                                <td data-label="Método"><span class="badge bg-warning text-dark">POST</span></td>
+                                <td data-label="Endpoint"><code>/events/&#123;id&#125;</code></td>
+                                <td data-label="Lógica">Logic Linked</td>
                             </tr>
                         </tbody>
                     </table>
@@ -84,60 +85,54 @@
             </div>
         </div>
     </section>
-<section class="mb-5">
-    <h2 class="fw-bold text-center mb-5">Current Implementation (4 Stages)</h2>
 
-    <div class="row align-items-center mb-5">
-        <div class="col-md-6">
-            <img src="assets/projects/family-app-preview.jpg" class="img-fluid rounded-3 shadow-lg border"
-                alt="Landing Page">
-        </div>
-        <div class="col-md-6 ps-md-5">
-            <h4 class="fw-bold text-primary">01. Landing & Concept</h4>
-            <p>La puerta de entrada. Presenta la propuesta de valor: <strong>centralizar la vida familiar</strong>.
-                Diseñada con un enfoque "mobile-first" y llamadas a la acción claras.</p>
-        </div>
-    </div>
+    <section class="mb-5 px-2">
+        <h2 class="fw-bold text-center mb-5">Current Implementation</h2>
 
-    <div class="row align-items-center mb-5">
-        <div class="col-md-6 order-md-1 order-2 pe-md-5 text-md-end">
-            <h4 class="fw-bold text-primary">02. Auth System</h4>
-            <p>Un flujo de registro robusto. El backend valida el email y hashea la contraseña con
-                <strong>Argon2</strong>. El frontend maneja formularios reactivos con validaciones.</p>
+        <div class="row align-items-center mb-5 text-center text-md-start">
+            <div class="col-md-6 mb-4 mb-md-0">
+                <img src="assets/projects/family-app-preview.jpg" class="img-fluid rounded-3 shadow border"
+                    alt="Stage 1">
+            </div>
+            <div class="col-md-6 ps-md-5">
+                <h4 class="fw-bold text-primary">01. Landing & Concept</h4>
+                <p>Presentación de la propuesta de valor centrada en la organización familiar.</p>
+            </div>
         </div>
-        <div class="col-md-6 order-md-2 order-1">
-            <img src="assets/projects/loginfamily.jpg" class="img-fluid rounded-3 shadow-lg border"
-                alt="Register Page">
-        </div>
-    </div>
 
-    <div class="row align-items-center mb-5">
-        <div class="col-md-6">
-            <img src="assets/projects/welcomefamily.jpg" class="img-fluid rounded-3 shadow-lg border"
-                alt="Welcome Screen">
+        <div class="row align-items-center mb-5 text-center text-md-end">
+            <div class="col-md-6 order-md-2 mb-4 mb-md-0">
+                <img src="assets/projects/loginfamily.jpg" class="img-fluid rounded-3 shadow border" alt="Stage 2">
+            </div>
+            <div class="col-md-6 order-md-1 pe-md-5">
+                <h4 class="fw-bold text-primary">02. Auth System</h4>
+                <p>Flujo de autenticación seguro con encriptación Argon2 y tokens JWT.</p>
+            </div>
         </div>
-        <div class="col-md-6 ps-md-5">
-            <h4 class="fw-bold text-primary">03. Welcome & Onboarding</h4>
-            <p>Una vez autenticado, el sistema recupera las familias asociadas al usuario. Es el <strong>puente de
-                    seguridad</strong> que inyecta el ID familiar necesario.</p>
-        </div>
-    </div>
 
-    <div class="row align-items-center mb-5">
-        <div class="col-md-6 order-md-1 order-2 pe-md-5 text-md-end">
-            <h4 class="fw-bold text-primary">04. Main Dashboard</h4>
-            <p>El núcleo de la gestión. Muestra dinámicamente miembros, hijos y eventos utilizando <strong>Angular
-                    Signals</strong> para una reactividad total.</p>
+        <div class="row align-items-center mb-5 text-center text-md-start">
+            <div class="col-md-6 mb-4 mb-md-0">
+                <img src="assets/projects/welcomefamily.jpg" class="img-fluid rounded-3 shadow border" alt="Stage 3">
+            </div>
+            <div class="col-md-6 ps-md-5">
+                <h4 class="fw-bold text-primary">03. Welcome & Onboarding</h4>
+                <p>Gestión de contexto familiar e inyección de estado global.</p>
+            </div>
         </div>
-        <div class="col-md-6 order-md-2 order-1">
-            <img src="assets/projects/dashboardfamily.jpg" class="img-fluid rounded-3 shadow-lg border"
-                alt="Dashboard Screen">
-        </div>
-    </div>
 
-</section>
+        <div class="row align-items-center mb-5 text-center text-md-end">
+            <div class="col-md-6 order-md-2 mb-4 mb-md-0">
+                <img src="assets/projects/dashboardfamily.jpg" class="img-fluid rounded-3 shadow border" alt="Stage 4">
+            </div>
+            <div class="col-md-6 order-md-1 pe-md-5">
+                <h4 class="fw-bold text-primary">04. Main Dashboard</h4>
+                <p>Interfaz reactiva para la gestión de eventos y miembros mediante Signals.</p>
+            </div>
+        </div>
+    </section>
+
     <footer class="text-center py-4 border-top">
-        <button routerLink="/" class="btn btn-outline-dark btn-sm">
+        <button routerLink="/" class="btn btn-outline-dark btn-sm rounded-pill px-4">
             <i class="bi bi-arrow-left"></i> Volver al Portfolio
         </button>
     </footer>

@@ -1,17 +1,19 @@
-.showcase-box {
-    padding: 15px;
-    background: white;
-    border-radius: 15px;
+/* --- Estilos Generales --- */
+.container {
+    overflow-x: hidden;
+}
+
+h4.text-primary {
+    color: #4f46e5 !important;
+    letter-spacing: 1px;
+}
+
+img.rounded-3 {
     transition: transform 0.3s ease;
 }
 
-.showcase-box:hover {
-    transform: translateY(-10px);
-}
-
-.showcase-box img {
-    max-height: 200px;
-    object-fit: cover;
+img.rounded-3:hover {
+    transform: scale(1.02);
 }
 
 code {
@@ -21,38 +23,84 @@ code {
     border-radius: 4px;
 }
 
-.rounded-4 {
-    border-radius: 1.5rem !important;
+/* --- TABLA RESPONSIVA PRO --- */
+.table-responsive-custom {
+    width: 100%;
 }
 
-/* Animación sutil para las tarjetas de tabla */
-.table-responsive {
-    border-radius: 10px;
-    overflow: hidden;
+@media (max-width: 768px) {
+    .table-responsive-custom thead {
+        display: none;
+        /* Esconde cabecera en móvil */
+    }
+
+    .table-responsive-custom,
+    .table-responsive-custom tbody,
+    .table-responsive-custom tr,
+    .table-responsive-custom td {
+        display: block;
+        width: 100%;
+    }
+
+    .table-responsive-custom tr {
+        margin-bottom: 1rem;
+        border: 1px solid #dee2e6;
+        border-radius: 8px;
+        padding: 10px;
+        background: #fff;
+    }
+
+    .table-responsive-custom td {
+        text-align: right;
+        padding: 10px 15px;
+        position: relative;
+        border: none;
+        border-bottom: 1px solid #eee;
+    }
+
+    .table-responsive-custom td:last-child {
+        border-bottom: none;
+    }
+
+    /* Inserta los nombres de las columnas antes de cada dato */
+    .table-responsive-custom td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 15px;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 0.75rem;
+        color: #6c757d;
+    }
+
+    /* Centrado de textos y botones en móvil */
+    .row.text-center-sm {
+        text-align: center !important;
+    }
+
+    .display-4 {
+        font-size: 2.2rem;
+    }
+
+    .btn {
+        width: 100%;
+        margin-bottom: 5px;
+    }
 }
 
-.badge {
-    font-size: 0.85rem;
-    letter-spacing: 0.5px;
-}
-/* Efecto de elevación al pasar el ratón por la descripción o imagen */
-.col-md-6 {
-    transition: all 0.3s ease-in-out;
+/* --- Animaciones --- */
+.animate__fadeIn {
+    animation: fadeIn 0.6s ease-in;
 }
 
-img.rounded-3 {
-    border: 2px solid #eee;
-    transition: transform 0.3s ease;
-}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
 
-img.rounded-3:hover {
-    transform: scale(1.03);
-    /* Un zoom sutil para ver detalles */
-    border-color: #4f46e5;
-}
-
-h4.text-primary {
-    color: #4f46e5 !important;
-    /* El color de tu marca personal */
-    letter-spacing: 1px;
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
