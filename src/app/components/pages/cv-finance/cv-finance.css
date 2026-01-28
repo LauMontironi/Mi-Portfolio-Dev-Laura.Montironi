@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+
+/* --- Reset y General --- */
+body {
+    background-color: #faf7f2 !important;
+    font-family: "Lato", sans-serif;
+    color: #1a1a1a;
+}
+
+/* --- Cabecera --- */
+.presentacion h1 {
+    font-weight: 900;
+    font-size: 3rem;
+    letter-spacing: -1px;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    font-size: 0.8rem;
+    color: #64748b;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* --- Botonera Superior --- */
+.btn-outline-dark {
+    border: 2px solid #000;
+    border-radius: 12px;
+    padding: 10px 20px;
+    font-weight: 700;
+    transition: all 0.2s ease;
+    background: transparent;
+}
+
+.btn-outline-dark:hover,
+.btn-outline-dark.active {
+    background-color: #000 !important;
+    color: #fff !important;
+    transform: translateY(-2px);
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Encabezados de Sección (Profile y Experience) --- */
+.btn-section-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background: #fff;
+    border: 3px solid #000;
+    border-radius: 15px;
+    font-size: 1.25rem;
+    font-weight: 900;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-top: 1rem;
+}
+
+.btn-section-header:hover {
+    background: #f8fafc;
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0px #000;
+}
+
+/* --- Contenedores de Información (Cards) --- */
+.card-simple {
+    background: #fff;
+    padding: 35px;
+    border: 3px solid #000;
+    border-radius: 20px;
+    box-shadow: 8px 8px 0px #000;
+    margin-bottom: 2rem;
+}
+
+/* Cuando la card sale debajo de un botón de sección */
+.btn-section-header+.card-simple {
+    border-top: none;
+    border-radius: 0 0 20px 20px;
+    margin-top: -5px;
+    /* Para que encaje con el botón */
+}
+
+/* --- Estilo de la Experiencia --- */
+.exp-article {
+    border-bottom: 2px dashed #e2e8f0;
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+}
+
+.exp-article:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.exp-article h3 {
+    font-size: 1.3rem;
+    font-weight: 900;
+    color: #000;
+    margin-bottom: 5px;
+}
+
+.exp-meta {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: #475569;
+    margin-bottom: 15px;
+}
+
+.bi-geo-alt-fill {
+    color: #ef4444;
+    /* Rojo para el pin de ubicación */
+}
+
+/* --- Listas --- */
+ul {
+    padding-left: 1.2rem;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+/* --- Animaciones --- */
+.animate__fadeIn {
+    animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --- Footer --- */
+footer {
+    border-top: 2px solid #000;
+    background: #fff;
+}
+
+.link-dark {
+    transition: color 0.2s;
+}
+
+.link-dark:hover {
+    color: #4f46e5 !important;
+}
+/* --- Avatar Centering Logic --- */
+.avatar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.avatar-img {
+    width: 150px;
+    /* Tamaño controlado para que no desborde */
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #000;
+    object-fit: cover;
+    box-shadow: 5px 5px 0px #4f46e5;
+}
+/* --- Estilos para Etiquetas Especiales (Since/Where) --- */
+.meta-label {
+    font-style: italic;
+    font-weight: 700;
+    color: #4f46e5;
+    /* Un tono índigo suave, elegante */
+    margin-right: 4px;
+}
+
+/* --- Centrado de Listas en Skills y Education --- */
+.text-center-list {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.text-center-list li {
+    margin-bottom: 12px;
+    font-size: 1.05rem;
+}
+
+/* Ajuste para que las fechas en Education se vean mejor */
+.edu-details {
+    display: block;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.9rem;
+    color: #64748b;
+    margin-top: 5px;
+}

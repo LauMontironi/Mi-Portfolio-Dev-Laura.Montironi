@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Inter:wght@400;800;900&display=swap');
+
+.tech-page {
+    background-color: #fff;
+    font-family: 'Inter', sans-serif;
+    color: #000;
+}
+
+.main-name {
+    font-weight: 900;
+    font-size: 3.5rem;
+    letter-spacing: -2px;
+}
+
+.tech-subtitle {
+    font-family: 'Fira Code', monospace;
+    font-size: 1.2rem;
+    color: #4f46e5;
+    background: #f1f5f9;
+    display: inline-block;
+    padding: 5px 15px;
+}
+
+/* --- Avatar Centering Logic --- */
+.avatar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.avatar-img {
+    width: 150px;
+    /* Tamaño controlado para que no desborde */
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #000;
+    object-fit: cover;
+    box-shadow: 5px 5px 0px #4f46e5;
+}
+
+/* Botones con estilo Neubrutalista */
+.btn-tech {
+    border: 3px solid #000;
+    background: #fff;
+    padding: 12px 25px;
+    font-weight: 800;
+    border-radius: 0;
+    box-shadow: 4px 4px 0px #000;
+    transition: all 0.2s;
+}
+
+.btn-tech:hover,
+.btn-tech.active {
+    background: #000;
+    color: #fff;
+    transform: translate(-2px, -2px);
+    box-shadow: 7px 7px 0px #4f46e5;
+}
+
+/* Cards */
+.card-tech {
+    background: #fff;
+    border: 3px solid #000;
+    padding: 40px;
+    box-shadow: 10px 10px 0px #000;
+    margin-bottom: 2rem;
+}
+
+.profile-tech {
+    border-color: #4f46e5;
+    box-shadow: 10px 10px 0px #000;
+}
+
+/* Tags de Skills */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.skill-tag {
+    background: #beb5b5;
+    color: black;
+    padding: 8px 18px;
+    font-family: 'Fira Code', monospace;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.skill-tag:nth-child(even) {
+    background: #4f46e5;
+}
+
+/* Experiencia */
+.experience-tech h3 {
+    font-weight: 900;
+    font-size: 1.4rem;
+}
+
+.tech-badge {
+    background: #e2e8f0;
+    padding: 4px 12px;
+    font-weight: 700;
+    font-size: 0.8rem;
+    border: 2px solid #000;
+}
+
+.profile-p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.btn-back {
+    border: 2px solid #000;
+    font-weight: 800;
+    padding: 10px 30px;
+    text-decoration: none;
+    color: #000;
+    display: inline-block;
+}
+
+.btn-back:hover {
+    background: #000;
+    color: #fff;
+}
+
+/* Verificado: Estilo del botón Journey */
+.btn-journey {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 28px;
+    background: #4f46e5;
+    color: #fff !important;
+    text-decoration: none;
+    border: 3px solid #000;
+    border-radius: 12px;
+    font-weight: 900;
+    box-shadow: 6px 6px 0px #000;
+    transition: all 0.2s ease;
+    margin-top: 25px;
+}
+
+.btn-journey:hover {
+    transform: translate(-3px, -3px);
+    box-shadow: 9px 9px 0px #000;
+    background: #4338ca;
+}
+
+.journey-icon {
+    font-size: 1.5rem;
+}
+
+.social-icon {
+    color: #000;
+    transition: transform 0.2s;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+    color: #4f46e5;
+}
+
+
+/* Contenedor del encabezado clicable */
+.btn-section-header-tech {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px;
+    background: #fff;
+    border: 3px solid #000;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    /* Espacio entre foto y texto */
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+
+.header-avatar {
+    width: 60px;
+    /* Tamaño reducido para el encabezado */
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid #000;
+    object-fit: cover;
+}
+
+.btn-section-header-tech:hover {
+    background: #f1f5f9;
+    transform: translate(-3px, -3px);
+    box-shadow: 6px 6px 0px #000;
+}
+
+/* Estado activo del botón */
+.active-header {
+    background: #000 !important;
+    color: #fff !important;
+    border-radius: 15px 15px 0 0;
+    /* Cuadra con la card de abajo */
+}
+
+.active-header .header-avatar {
+    border-color: #fff;
+}
+
+/* El contenido que se despliega */
+.card-tech-content {
+    background: #fff;
+    border: 3px solid #000;
+    border-top: none;
+    padding: 30px;
+    border-radius: 0 0 15px 15px;
+    box-shadow: 6px 6px 0px #000;
+}
+
+.experience-tech h3 {
+    font-size: 1.3rem;
+    font-weight: 800;
+    margin-bottom: 5px;
+}

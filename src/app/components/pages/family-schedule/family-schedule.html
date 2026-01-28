@@ -1,0 +1,144 @@
+<div class="container py-5 animate__animated animate__fadeIn">
+    <header class="text-center mb-5">
+        <span class="badge bg-primary mb-2">Full Stack Project</span>
+        <h1 class="display-4 fw-bold">👨‍👩‍👧‍👦 Family Scheduler</h1>
+        <p class="lead text-muted mx-auto" style="max-width: 700px;">
+            Una solución integral para la organización familiar que conecta una arquitectura robusta en
+            <strong>FastAPI</strong> con una interfaz dinámica en <strong>Angular 18</strong>.
+        </p>
+        <div class="d-flex justify-content-center gap-3 mt-4">
+            <a href="https://family-scheduler-front.netlify.app" target="_blank" class="btn btn-dark">
+                <i class="bi bi-rocket-takeoff"></i> Live Demo
+            </a>
+            <a href="https://github.com/LauMontironi/Family-scheduler-project-Backend" target="_blank" class="btn btn-outline-dark">
+                <i class="bi bi-github"></i> View Code Backend
+            </a>
+            <a href="https://github.com/LauMontironi/Family-scheduler-project-Frontend" target="_blank" class="btn btn-outline-dark">
+                <i class="bi bi-github"></i> View Code Frontend
+            </a>
+        </div>
+    </header>
+
+    <section class="row mb-5 align-items-center">
+        <div class="col-md-6">
+            <h2 class="fw-bold">El Concepto</h2>
+            <p>El objetivo era crear una plataforma donde los padres pudieran gestionar no solo el calendario, sino
+                también los perfiles de sus hijos y miembros de la familia en un entorno seguro y privado.</p>
+            <ul class="list-unstyled">
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Frontend:</strong> Angular con
+                    Signals.</li>
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Backend:</strong> FastAPI y
+                    Pydantic.</li>
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Seguridad:</strong> JWT con Argon2.
+                </li>
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Base de Datos:</strong> MySQL 8.
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-6">
+            <div class="card shadow-sm border-0">
+                <img src="assets/projects/family-app-preview.jpg" class="card-img-top rounded shadow" alt="Landing Page">
+                <div class="card-body p-2 text-center text-muted small">Capture: Landing page principal del proyecto
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mb-5">
+        <h2 class="fw-bold mb-4">Arquitectura Técnica</h2>
+        <div class="card border-dark shadow-sm">
+            <div class="card-header bg-dark text-white fw-bold">REST API Endpoints & Logic</div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Módulo</th>
+                                <th>Método</th>
+                                <th>Endpoint</th>
+                                <th>Lógica</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Auth</strong></td>
+                                <td><span class="badge bg-success">POST</span></td>
+                                <td><code>/auth/login</code></td>
+                                <td>Validación de Hash y JWT.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Families</strong></td>
+                                <td><span class="badge bg-primary">GET</span></td>
+                                <td><code>/families/my</code></td>
+                                <td>Filtro de seguridad por pertenencia.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Events</strong></td>
+                                <td><span class="badge bg-warning text-dark">POST</span></td>
+                                <td><code>/events/&#123;child_id&#125;</code></td>
+                                <td>Vinculación de eventos a hijos.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+<section class="mb-5">
+    <h2 class="fw-bold text-center mb-5">Current Implementation (4 Stages)</h2>
+
+    <div class="row align-items-center mb-5">
+        <div class="col-md-6">
+            <img src="assets/projects/family-app-preview.jpg" class="img-fluid rounded-3 shadow-lg border"
+                alt="Landing Page">
+        </div>
+        <div class="col-md-6 ps-md-5">
+            <h4 class="fw-bold text-primary">01. Landing & Concept</h4>
+            <p>La puerta de entrada. Presenta la propuesta de valor: <strong>centralizar la vida familiar</strong>.
+                Diseñada con un enfoque "mobile-first" y llamadas a la acción claras.</p>
+        </div>
+    </div>
+
+    <div class="row align-items-center mb-5">
+        <div class="col-md-6 order-md-1 order-2 pe-md-5 text-md-end">
+            <h4 class="fw-bold text-primary">02. Auth System</h4>
+            <p>Un flujo de registro robusto. El backend valida el email y hashea la contraseña con
+                <strong>Argon2</strong>. El frontend maneja formularios reactivos con validaciones.</p>
+        </div>
+        <div class="col-md-6 order-md-2 order-1">
+            <img src="assets/projects/loginfamily.jpg" class="img-fluid rounded-3 shadow-lg border"
+                alt="Register Page">
+        </div>
+    </div>
+
+    <div class="row align-items-center mb-5">
+        <div class="col-md-6">
+            <img src="assets/projects/welcomefamily.jpg" class="img-fluid rounded-3 shadow-lg border"
+                alt="Welcome Screen">
+        </div>
+        <div class="col-md-6 ps-md-5">
+            <h4 class="fw-bold text-primary">03. Welcome & Onboarding</h4>
+            <p>Una vez autenticado, el sistema recupera las familias asociadas al usuario. Es el <strong>puente de
+                    seguridad</strong> que inyecta el ID familiar necesario.</p>
+        </div>
+    </div>
+
+    <div class="row align-items-center mb-5">
+        <div class="col-md-6 order-md-1 order-2 pe-md-5 text-md-end">
+            <h4 class="fw-bold text-primary">04. Main Dashboard</h4>
+            <p>El núcleo de la gestión. Muestra dinámicamente miembros, hijos y eventos utilizando <strong>Angular
+                    Signals</strong> para una reactividad total.</p>
+        </div>
+        <div class="col-md-6 order-md-2 order-1">
+            <img src="assets/projects/dashboardfamily.jpg" class="img-fluid rounded-3 shadow-lg border"
+                alt="Dashboard Screen">
+        </div>
+    </div>
+
+</section>
+    <footer class="text-center py-4 border-top">
+        <button routerLink="/" class="btn btn-outline-dark btn-sm">
+            <i class="bi bi-arrow-left"></i> Volver al Portfolio
+        </button>
+    </footer>
+</div>

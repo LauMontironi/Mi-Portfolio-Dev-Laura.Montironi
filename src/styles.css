@@ -1,0 +1,531 @@
+
+/* =========================
+   Base / Global
+========================= */
+html {
+    scroll-behavior: smooth !important;
+}
+
+body {
+    /* Fondo menos blanco (pedido) */
+    background-color: #f1f3f5;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-family: "Montserrat", cursive;
+}
+
+/* Estas clases en tu HTML llevan punto (antes estaban como selector de etiqueta y no aplicaban) */
+.seccion-titulo {
+    padding: 15px 0;
+    font-size: 2rem;
+    font-family: "Roboto Flex", sans-serif;
+}
+
+.seccion-texto {
+    font-size: 1.2rem;
+}
+
+/* Secciones */
+.seccion-clara {
+    /* antes era white puro */
+    background-color: #f8f9fa;
+    color: black;
+}
+
+.seccion-oscura {
+    background-color: #101049;
+    color: white;
+}
+
+/* Utilidades */
+.texto-negro {
+    color: black;
+}
+
+.texto-blanco {
+    color: white;
+}
+
+/* =========================
+   Navbar
+========================= */
+.navbar {
+    padding: 2rem;
+    background-color: #f5f6f7;
+}
+
+.navbar-collapse {
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* =========================
+   Hero (legacy + minimal)
+========================= */
+/* (Legacy: no se usa en este HTML, lo dejo por si lo usás en otra página) */
+.hero {
+    background-color: #f5f6f7;
+    min-height: 450px;
+    text-align: center;
+}
+
+.hero-principal {
+    padding: 3rem;
+}
+
+.hero-principal h2 {
+    font-size: 1.5rem;
+    color: #615151;
+}
+
+/* Foto perfil (la usás en el hero minimal) */
+.hero-imagen-perfil {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 20px;
+}
+
+/* ===== HERO minimal (mejor alineación + foto más grande en desktop) ===== */
+.hero-minimal {
+    padding: 3.5rem 0 2rem;
+}
+
+.hero-minimal__wrap {
+    display: grid;
+    grid-template-columns: 170px 1fr;
+    /* antes 120px */
+    gap: 2rem;
+    /* más aire */
+    align-items: center;
+    /* ✅ centra verticalmente foto + texto */
+}
+
+/* Foto más grande, mismo lugar */
+.hero-minimal__img {
+    width: 150px;
+    /* antes 110px */
+    height: 150px;
+    /* antes 110px */
+    object-fit: cover;
+    border-radius: 999px;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+
+
+}
+
+/* Título y texto un poco más “centrados” visualmente */
+.hero-minimal__title {
+    margin: 0 0 0.5rem 0;
+    line-height: 1.1;
+}
+
+.hero-minimal__subtitle {
+    margin: 0 0 1.1rem 0;
+    max-width: 70ch;
+    /* evita que se estire demasiado */
+}
+
+/* Limita el ancho del texto para que se vea más prolijo */
+.hero-minimal__text p {
+    max-width: 70ch;
+    /* antes 72ch, lo ajusto un pelín */
+}
+
+.hero-minimal__link {
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.hero-minimal__actions {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+/* =========================
+   Experiencia (legacy)
+========================= */
+.experiencia {
+    padding: 40px 40px 60px 40px;
+}
+
+.experiencia-titulo {
+    font-size: 25px;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+.experiencia i {
+    font-size: 2.5rem;
+    color: hsl(94, 59%, 77%);
+    background-color: #101049;
+    padding: 8px 19px;
+    border-radius: 50%;
+}
+
+.experiencia .columna {
+    padding: 20px;
+    border: 2px solid #8080804d;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: all 0.2s ease-in;
+}
+
+.experiencia .columna:hover {
+    color: white;
+    background-color: #1b1b32;
+}
+
+.badges-contenedor {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.badge {
+    margin: 10px;
+}
+
+/* =========================
+   Projects
+========================= */
+.proyectos-recientes {
+    padding: 40px;
+}
+
+.proyectos-contenedor {
+    padding-top: 60px;
+    margin-bottom: 40px;
+}
+
+/* Projects: fondo más suave que el blanco */
+#projects {
+    background-color: #eef1f4;
+}
+
+/* Contenedor del proyecto: necesario para que el redondeo recorte la imagen */
+.proyecto {
+    position: relative;
+    overflow: hidden;
+    /* <- clave para que se recorte con bordes redondeados */
+    border-radius: 12px;
+    /* <- redondeo suave del bloque */
+}
+
+/* Imágenes: ya tenían border-radius, lo ajusto a “ligero” y consistente */
+.proyectos-recientes img {
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+    display: block;
+    transition: all 0.2s ease;
+    border-radius: 12px;
+    /* <- pedido: redondear ligeramente */
+}
+
+/* Overlay */
+.overlay {
+    transition: all 0.2s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 90%;
+}
+
+/* Este selector aplica a tu “título” si no hubiera inline styles */
+.overlay p {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+/* ✅ Recorta la descripción (el 2º <p> dentro del overlay) para que no se salga */
+.overlay p:last-of-type {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    /* <- ajustá 2/3/4 según te guste */
+}
+
+/* Iconos */
+.overlay .iconos-contenedor {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.overlay i {
+    color: black;
+    font-size: 60px;
+    margin: 10px;
+}
+
+/* Hover */
+.proyecto:hover img {
+    opacity: 0.2;
+}
+
+.proyecto:hover .overlay {
+    opacity: 1;
+}
+
+/* =========================
+   CV
+========================= */
+.section-min-title {
+    font-size: 1.6rem;
+    margin: 1.25rem 0 0.25rem;
+}
+
+.section-min-subtitle {
+    margin: 0 0 1.25rem;
+    opacity: 0.9;
+    max-width: 80ch;
+}
+
+.cv-section {
+    padding: 2rem 0;
+}
+
+.cv-card {
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 16px;
+    padding: 1.25rem;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.cv-card__title {
+    font-weight: 700;
+    font-size: 1.1rem;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.cv-card__text {
+    opacity: 0.9;
+}
+
+/* =========================
+   Contacto
+========================= */
+/* antes era .contacto.container (no aplicaba en tu HTML). Ahora sí */
+.contacto .container {
+    max-width: 1100px;
+    min-height: 200px;
+    padding: 20px;
+}
+
+.rectangulo {
+    margin-top: -3rem;
+    background-color: rgb(13, 110, 253);
+    border-radius: 10px;
+    box-shadow: 0px 1px 4px 1px white;
+}
+
+.contacto .row {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.contacto .descripcion {
+    color: white;
+    font-size: 1.2rem;
+}
+
+.contacto button {
+    color: white;
+    font-weight: bold;
+    background-color: transparent;
+    border: 2px solid white;
+    padding: 1.25em 2em;
+    margin: 10px;
+    border-radius: 100px;
+    transition: all 0.2s ease-in-out;
+}
+
+.contacto button i {
+    font-size: 1.3rem;
+    color: white;
+    transition: all 0.2s ease-in-out;
+}
+
+.contacto button:hover {
+    background-color: white;
+    color: #1b1b32;
+}
+
+.contacto button:hover i {
+    color: #1b1b32;
+}
+
+/* =========================
+   Footer
+========================= */
+footer {
+    min-height: 500px;
+}
+
+.footer-icono {
+    font-size: 40px;
+    margin: 10px;
+}
+
+.footer-texto {
+    font-size: 1.5rem;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.iconos-redes-sociales a {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+    margin: 10px;
+    border-radius: 50%;
+    border: 2px solid white;
+    transition: 0.2s all ease-in;
+}
+
+.iconos-redes-sociales i {
+    color: white;
+    font-size: 1.5rem;
+    transition: 0.2s all ease-in;
+}
+
+.iconos-redes-sociales a:hover {
+    background-color: white;
+    border: 2px solid rgb(13, 110, 253);
+}
+
+.iconos-redes-sociales i:hover {
+    color: black;
+}
+
+.derechos-de-autor {
+    font-size: 15px;
+    color: #aeaeae;
+    padding: 20px;
+}
+
+/* =========================
+   Responsive
+========================= */
+@media screen and (max-width: 767px) {
+    .navbar-brand {
+        display: none;
+    }
+}
+
+/* (Legacy) */
+@media screen and (min-width: 700px) {
+    .hero-inferior-imagen {
+        max-width: 600px;
+    }
+}
+
+/* Overlay compacto en pantallas muy chicas */
+@media screen and (max-width: 470px) {
+    .overlay {
+        width: 95%;
+        padding: 5px;
+    }
+
+    .overlay p {
+        font-size: 0.9rem;
+        line-height: 1.2;
+        margin-bottom: 5px !important;
+        white-space: normal;
+    }
+
+    .overlay i {
+        font-size: 30px;
+        margin: 5px;
+    }
+}
+
+/* ✅ Mobile hero centrado (texto + foto) */
+@media (max-width: 576px) {
+    .hero-minimal__wrap {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero-minimal__photo {
+        display: flex;
+        justify-content: center;
+        /* antes estaba flex-start */
+    }
+
+    .hero-minimal__actions {
+        justify-content: center;
+    }
+
+    .hero-minimal__text p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* Flip tipo WhatsApp para la foto de perfil */
+.hero-minimal__img {
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    will-change: transform;
+}
+
+.hero-minimal__img.is-flipping {
+    animation: profileFlip 3.2s ease-in-out both;
+}
+
+@keyframes profileFlip {
+    0% {
+        transform: rotateY(0deg);
+    }
+
+    20% {
+        transform: rotateY(180deg);
+    }
+
+    /* primer cambio (a avatar) */
+    80% {
+        transform: rotateY(180deg);
+    }
+
+    /* mantiene avatar ~2s */
+    100% {
+        transform: rotateY(360deg);
+    }
+
+    /* segundo cambio (a original) */
+}
+
+/* Respeta accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+    .hero-minimal__img.is-flipping {
+        animation: none;
+    }
+}

@@ -1,0 +1,58 @@
+.showcase-box {
+    padding: 15px;
+    background: white;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+.showcase-box:hover {
+    transform: translateY(-10px);
+}
+
+.showcase-box img {
+    max-height: 200px;
+    object-fit: cover;
+}
+
+code {
+    color: #e83e8c;
+    background-color: #f8f9fa;
+    padding: 2px 5px;
+    border-radius: 4px;
+}
+
+.rounded-4 {
+    border-radius: 1.5rem !important;
+}
+
+/* Animación sutil para las tarjetas de tabla */
+.table-responsive {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.badge {
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+}
+/* Efecto de elevación al pasar el ratón por la descripción o imagen */
+.col-md-6 {
+    transition: all 0.3s ease-in-out;
+}
+
+img.rounded-3 {
+    border: 2px solid #eee;
+    transition: transform 0.3s ease;
+}
+
+img.rounded-3:hover {
+    transform: scale(1.03);
+    /* Un zoom sutil para ver detalles */
+    border-color: #4f46e5;
+}
+
+h4.text-primary {
+    color: #4f46e5 !important;
+    /* El color de tu marca personal */
+    letter-spacing: 1px;
+}

@@ -1,0 +1,221 @@
+<section class="presentacion text-center py-5">
+    <h1>LAURA MONTIRONI</h1>
+    <h2 class="subtitle">FINANCE AND ACCOUNTING SPECIALIST | FINANCIAL CONTROL | ERP IMPLEMENTATION | INTERNATIONAL
+        REPORTING</h2>
+</section>
+
+<section class="py-3">
+    <div class="container d-flex justify-content-center gap-3 flex-wrap">
+        <button (click)="toggle(1)" class="btn btn-outline-dark" [class.active]="activeSection === 1">
+            <i class="bi bi-lightbulb-fill"></i> Skills
+        </button>
+        <button (click)="toggle(2)" class="btn btn-outline-dark" [class.active]="activeSection === 2">
+            <i class="bi bi-patch-check-fill"></i> Education
+        </button>
+        <button (click)="toggle(3)" class="btn btn-outline-dark" [class.active]="activeSection === 3">
+            <i class="bi bi-person-lines-fill"></i> Contact
+        </button>
+    </div>
+</section>
+
+<div class="container mt-4">
+@if (activeSection === 1) {
+<div class="card-simple animate__animated animate__fadeIn">
+    <div class="avatar-container">
+        <img src="assets/images/skills.png" alt="Lau-skills" class="avatar-img">
+    </div>
+    <h2 class="text-center mb-4">Skills</h2>
+    <ul class="text-center-list">
+        <li>General and Analytical Accounting</li>
+        <li>ERP: SAP, NetSuite, Holded, Sage / ContaPlus</li>
+        <li>Taxation and National/Intra-community VAT</li>
+        <li>Management of DUA and International Operations</li>
+        <li>Financial Control, Reconciliations, and Reporting</li>
+        <li>Advanced Excel, Power BI, and Collaborative Tools</li>
+        <li>Shopify, Sendcloud, mailChimp, PayPal, Stripe</li>
+    </ul>
+    </div>
+
+}
+
+@if (activeSection === 2) {
+<div class="card-simple animate__animated animate__fadeIn">
+    <div class="avatar-container">
+        <img src="assets/images/studies.png" alt="Lau-studying" class="avatar-img">
+    </div>
+    <h2 class="text-center mb-4">Education</h2>
+    <ul class="text-center-list">
+        <li>
+            <strong>Universitat de Barcelona (Spain)</strong><br>
+            ADE – Public Accountant Degree Validation
+            <span class="edu-details">
+                <span class="meta-label">Since/then</span> 2013-2015 || <span class="meta-label">Where?</span> Spain
+            </span>
+        </li>
+        <li>
+            <strong>EAE Business School (Barcelona)</strong><br>
+            MBA
+            <span class="edu-details">
+                <span class="meta-label">Since/then</span> 2013-2014 || <span class="meta-label">Where?</span> Spain
+            </span>
+        </li>
+        <li>
+            <strong>Universidad Nacional de Córdoba (Argentina)</strong><br>
+            Public Accountant
+            <span class="edu-details">
+                <span class="meta-label">Since/then</span> 2006-2010 || <span class="meta-label">Where?</span> Argentina
+            </span>
+        </li>
+    </ul>
+</div>
+}
+
+    @if (activeSection === 3) {
+    <div class="card-simple animate__animated animate__fadeIn text-center">
+            <div class="avatar-container">
+                <img src="assets/images/contactme.jpg" alt="Lau-contact" class="avatar-img">
+            </div>
+        <h2 class="mb-4">Contact Me</h2>
+        <div class="contact-info">
+            <p><i class="bi bi-phone"></i> 630 726 647</p>
+            <p><i class="bi bi-envelope-at-fill"></i> lau.montironi&#64;gmail.com</p>
+            <p><i class="bi bi-geo-alt-fill text-primary"></i> Barcelona, Spain</p>
+        </div>
+    </div>
+    }
+
+    <div class="mt-4">
+        <button (click)="toggle(4)" class="btn-section-header">
+                               
+             <img src="assets/images/thinking.jpg" alt="Lau-thinking" class="header-avatar">
+                               
+            <span> PROFESSIONAL PROFILE</span>
+            <i class="bi" [class.bi-chevron-down]="activeSection !== 4" [class.bi-chevron-up]="activeSection === 4"></i>
+        </button>
+        @if (activeSection === 4) {
+        <div class="card-simple mt-2 animate__animated animate__fadeIn">
+            <p>A finance and accounting professional with over 10 years of experience in the comprehensive management of accounting
+            processes, financial control, and international operations across the logistics, real estate, and e-commerce sectors.
+            Expert in ERP systems (SAP, NetSuite, Holded, ContaPlus) and skilled in managing VAT, DUA, reconciliations, and
+            financial reporting, ensuring accuracy, tax compliance, and operational efficiency. With a solid foundation in Public
+            Accounting and an MBA, I combine analytical thinking, problem-solving capability, and attention to detail with a digital
+            mindset. </p>
+            <p>I am currently expanding my competencies in **Python development, SQL, and data analysis**. Committed to
+            continuous improvement and optimizing financial processes within multinational and technological environments.</p>
+        </div>
+        }
+    </div>
+
+    <div class="mt-4 mb-5">
+        <button (click)="toggle(5)" class="btn-section-header">
+            <img src="assets/images/experience.jpg" alt="Lau-working" class="header-avatar">
+            <span> PROFESSIONAL EXPERIENCE</span>
+            <i class="bi" [class.bi-chevron-down]="activeSection !== 5" [class.bi-chevron-up]="activeSection === 5"></i>
+        </button>
+
+        @if (activeSection === 5) {
+        <div class="card-simple mt-2 animate__animated animate__fadeIn">
+
+            <article class="exp-article">
+                <h3>STP GROUP – Accounts Payable Manager</h3>
+                <p class="exp-meta"><span class="meta-label">Since/then</span>Feb 2025 – Present || <span>Where?</span>Barcelona</p>
+                <ul>
+                    <li>Responsible for supplier accounting using SAP, including the recording and control of invoices
+                        with various VAT types.</li>
+                    <li>Proactively managed incidents with the commercial team and suppliers to ensure correct
+                        imputation and payment.</li>
+                    <li>Effectuated and reconciled the import DUA (Single Administrative Document), ensuring tax
+                        compliance and accurate reconciliation of international operations.</li>
+                </ul>
+            </article>
+
+            <article class="exp-article">
+                <h3>OPERLESS – ERP Project Assistant (NetSuite)</h3>
+                <p class="exp-meta"><span class="meta-label">Since/then</span> Mar 2021 – Feb 2023 || <span class="meta-label">Where?</span> Barcelona</p>
+                <ul>
+                    <li>Supported the implementation of the NetSuite ERP, validating financial data and configuring
+                        accounting modules.</li>
+                    <li>Ensured data integrity and detected inconsistencies to maintain accurate accounting processes.
+                    </li>
+                    <li>Closely collaborated with the finance department to strengthen the control and traceability of
+                        accounting information.</li>
+                </ul>
+            </article>
+
+            <article class="exp-article">
+                <h3>FISHIKII – Operations & Customer Service Manager</h3>
+                <p class="exp-meta"><span class="meta-label">Since/then</span> Dec 2019 – Feb 2021 || <span class="meta-label">Where?</span> Vilanova i la Geltrú
+                </p>
+                <ul>
+                    <li>Coordinated the complete sales cycle for a global e-commerce brand, managing orders,
+                        international shipping, and customer service.</li>
+                    <li>Supervised suppliers, internal teams, and external collaborations for payroll and accounting.
+                    </li>
+                    <li>Optimized operations using NetSuite, Shopify, Sendcloud, PayPal, and Stripe, achieving
+                        significant improvements in delivery times and customer satisfaction.</li>
+                </ul>
+            </article>
+
+            <article class="exp-article">
+                <h3>RECINBCN & COXA – Financial Controller</h3>
+                <p class="exp-meta"><span class="meta-label">Since/then</span> Jan 2018 – Nov 2019 || <span class="meta-label">Where?</span> Barcelona</p>
+                <ul>
+                    <li>Managed financial and accounting operations for a real estate investment group.</li>
+                    <li>Prepared results reports and balance sheets, ensuring accuracy and consistency of financial
+                        information.</li>
+                    <li>Implemented controls that improved cash flow efficiency and the reliability of monthly closings.
+                    </li>
+                </ul>
+            </article>
+
+            <article class="exp-article">
+                <h3>ENGEL & VÖLKERS ESPAÑA – Financial Executive</h3>
+                <p class="exp-meta"><span class="meta-label">Since/then</span> Dec 2015 – Dec 2017 || <span class="meta-label">Where?</span> Barcelona</p>
+                <ul>
+                    <li>Responsible for financial planning, invoicing, and performance analysis.</li>
+                    <li>Supervised operations in SAP, ensuring accuracy in accounting and the generation of reports for
+                        management.</li>
+                    <li>Supported budget preparation and forecasting, contributing to key strategic decisions.</li>
+                </ul>
+            </article>
+
+            <article class="exp-article">
+                <h3>STANLEY BLACK & DECKER – Accounts Receivable Specialist</h3>
+                <p class="exp-meta"><span class="meta-label">Since/then</span> Dec 2014 – Dec 2015 || <span class="meta-label">Where?</span> Barcelona</p>
+                <ul>
+                    <li>Managed incoming payments and financial records, keeping accounts receivable up-to-date.</li>
+                    <li>Collaborated with clients and internal departments to improve cash flow.</li>
+                    <li>Increased accuracy in collections reporting and bank reconciliations.</li>
+                </ul>
+            </article>
+
+            <article class="exp-article">
+                <h3>YOGURTLANDIA – Franchise Administrator</h3>
+                <p class="exp-meta"><span class="meta-label">Since/then</span> Oct 2012 – Dec 2013 || <span class="meta-label">Where?</span> Barcelona</p>
+                <ul>
+                    <li>Supervised daily operations, finance, and staff coordination in a franchise environment.</li>
+                    <li>Controlled inventory, orders, and supply chain, ensuring business quality and profitability.
+                    </li>
+                    <li>Supported administrative management and customer service, driving revenue growth.</li>
+                </ul>
+            </article>
+
+            <article class="exp-article">
+                <h3>AUTOMONT S.R.L – Finance Manager</h3>
+                <p class="exp-meta"><span class="meta-label">Since/then</span> Jan 2011 – Oct 2012 || <span class="meta-label">Where?</span> Córdoba, Argentina</p>
+                <ul>
+                    <li>Responsible for daily accounting, bank reconciliations, and expense control at a multi-brand
+                        automotive agency.</li>
+                    <li>Coordinated payments, collections, and monthly financial analysis.</li>
+                    <li>Implemented administrative procedures that improved operational efficiency.</li>
+                </ul>
+            </article>
+
+        </div>
+        }
+    </div>
+</div>
+
+<footer class="text-center py-5 border-top">
+    <a class="btn btn-dark rounded-pill px-4" routerLink="/">⬅ Back to Portfolio</a>
+</footer>

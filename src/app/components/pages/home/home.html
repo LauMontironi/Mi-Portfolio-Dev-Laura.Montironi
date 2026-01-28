@@ -1,0 +1,226 @@
+<!-- Navbar (minimal) -->
+<nav class="navbar navbar-expand-md navbar-light">
+    <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggler"
+            aria-controls="navbar-toggler" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbar-toggler">
+            <a class="navbar-brand" href="#">
+                <img src="assets/code-square.svg" width="50" alt="Website logo">
+            </a>
+
+            <ul class="navbar-nav d-flex justify-content-center align-items-center">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#projects">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#cv">CV</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"
+                        href="https://dev.to/laumontironi/mi-camino-dev-blog-aprendiendo-a-programar-desde-cero-sin-rendirme-25dn"
+                        target="_blank" rel="noopener noreferrer">
+                        Blog <i class="bi bi-box-arrow-up-right"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contacto">Contact</a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+<!-- HERO / ABOUT (minimal, photo + intro) -->
+<header class="hero-minimal" id="about">
+    <div class="container hero-minimal__wrap d-flex flex-column flex-md-row align-items-center justify-content-center">
+        <div class="hero-minimal__photo">
+            <div class="profile-flip">
+                <img src="assets/Perfil.jpg" alt="Laura Montironi" class="front" />
+                <img src="assets/perfil_avatar.png" alt="Avatar" class="back" />
+            </div>
+
+        </div>
+
+        <div class="hero-minimal__content">
+            <h1 class="hero-minimal__title">Hi, I'm Laura Montironi 👋</h1>
+            <p class="hero-minimal__subtitle">
+                Full Stack Developer with a strong Finance background, bringing a business-first mindset to system
+                efficiency and clean logic.
+            </p>
+
+            <div class="hero-minimal__text">
+                <p>
+                    I’m deepening my skills through intensive hands-on learning, building modern, dynamic,
+                    responsive applications.
+                    On the frontend, I work with 🌐 HTML, 🎨 CSS, ⚡ JavaScript, 🅰️ Angular, and UI frameworks like
+                    📦 Bootstrap and ✨ Tailwind CSS.
+                </p>
+
+                <p>
+                    On the backend, I build 🚀 REST APIs with 🐍 Python and FastAPI, working with 🗄️ MySQL (SQL)
+                    and 🍃 MongoDB for data management.
+                    I also use 🔧 Git & GitHub for version control and agile workflows.
+                </p>
+
+                <p class="mb-0">
+                    I document my learning journey and projects on my blog:
+                    <a class="hero-minimal__link"
+                        href="https://dev.to/laumontironi/mi-camino-dev-blog-aprendiendo-a-programar-desde-cero-sin-rendirme-25dn"
+                        target="_blank" rel="noopener noreferrer">
+                        Diario de una aprendiz de código <i class="bi bi-box-arrow-up-right"></i>
+                    </a>
+                </p>
+            </div>
+
+            <div class="hero-minimal__actions">
+                <a class="btn btn-dark" href="#projects">
+                    View Projects <i class="bi bi-arrow-down"></i>
+                </a>
+                <a class="btn btn-outline-dark" href="#cv">
+                    CV <i class="bi bi-file-earmark-text"></i>
+                </a>
+                <a class="btn btn-outline-dark" href="https://github.com/LauMontironi" target="_blank"
+                    rel="noopener noreferrer">
+                    GitHub <i class="bi bi-github"></i>
+                </a>
+                <a class="btn btn-outline-dark" href="https://www.linkedin.com/in/laura-montironi" target="_blank"
+                    rel="noopener noreferrer">
+                    LinkedIn <i class="bi bi-linkedin"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+<section id="featured-project" class="py-5">
+    <div class="container">
+        <h2 class="section-min-title text-center mb-5">🚀 Star Project</h2>
+
+        <div class="featured-card-wrapper" routerLink="/family-schedule">
+            <div class="featured-badge">Full Stack - In Development</div>
+
+            <div class="row g-0 align-items-center">
+
+                <div class="col-lg-5">
+                    <div class="featured-image-container">
+                        <img src="assets/projects/family-app-preview.jpg" alt="Family Schedule App" class="img-fluid">
+                    </div>
+                </div>
+
+                <div class="col-lg-7 p-4 p-md-5">
+                    <h3 class="display-6 fw-bold mb-3">Family Schedule & Finance</h3>
+                    <p class="lead text-muted">
+                        An integral system to sync family agendas and finances. Built from scratch combining
+                        business logic with modern web architecture.
+                    </p>
+
+                    <div class="tech-stack-pills mb-4">
+                        <span class="badge rounded-pill bg-primary">FastAPI (Python)</span>
+                        <span class="badge rounded-pill bg-info text-dark">Angular 18</span>
+                        <span class="badge rounded-pill bg-dark">PostgreSQL</span>
+                        <span class="badge rounded-pill bg-secondary">JWT Auth</span>
+                    </div>
+
+                    <button class="btn btn-dark btn-lg">
+                        Explore Project Process <i class="bi bi-arrow-right"></i>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<app-projects [Projects]="PROJECTS"></app-projects>
+
+
+<!-- CV -->
+<section id="cv" class="cv-section seccion-clara">
+    <div class="container">
+        <h2 class="section-min-title">CV</h2>
+        <p class="section-min-subtitle">Choose the CV version you want to view.</p>
+
+        <div class="row g-3 justify-content-center">
+            <div class="col-12 col-md-6 col-lg-5">
+                <div class="cv-card">
+                    <div class="cv-card__title">
+                        <i class="bi bi-laptop"></i> Tech CV
+                    </div>
+                    <p class="cv-card__text mb-3">
+                        Full Stack profile focused on backend (FastAPI + SQL) and frontend experience.
+                    </p>
+                    <a class="btn btn-dark" routerLink="/cv-tech">
+                        Open Tech CV <i class="bi bi-box-arrow-up-right"></i>
+                    </a>
+                    
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-5">
+                <div class="cv-card">
+                    <div class="cv-card__title">
+                        <i class="bi bi-calculator"></i> Financial CV
+                    </div>
+                    <p class="cv-card__text mb-3">
+                        Finance / Accounting background and professional experience.
+                    </p>
+                    <a class="btn btn-outline-dark" routerLink="/cv-finance">
+                        Open Financial CV <i class="bi bi-box-arrow-up-right"></i>
+                    </a>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact -->
+<section id="contacto" class="contacto seccion-oscura">
+    <div class="container">
+        <div class="container text-center d-flex rectangulo justify-content-evenly">
+            <div class="row">
+                <div class="col-12 col-md-4 seccion-titulo">
+                    Let's Talk!
+                </div>
+                <div class="col-12 col-md-4 descripcion">
+                    Let's connect! I'm ready to contribute to your next project.
+                </div>
+                <div class="col-12 col-md-4">
+                    <a href="mailto:lau.montironi@gmail.com">
+                        <button type="button">
+                            Contact
+                            <i class="bi bi-envelope-check-fill"></i>
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="seccion-oscura d-flex flex-column align-items-center justify-content-center">
+    <i class="bi bi-suitcase-lg footer-icono"></i>
+    <p class="footer-texto text-center">The loop: Learn. Code. Build. Repeat. <br> Let's code &lt;&gt; Together</p>
+    <div class="iconos-redes-sociales d-flex flex-wrap align-items-center justify-content-center">
+        <a href="https://github.com/LauMontironi" target="_blank" rel="noopener noreferrer"><i
+                class="bi bi-github"></i></a>
+        <a href="https://www.linkedin.com/in/laura-montironi" target="_blank" rel="noopener noreferrer">
+            <i class="bi bi-linkedin"></i>
+        </a>
+        <a href="https://dev.to/laumontironi/mi-camino-dev-blog-aprendiendo-a-programar-desde-cero-sin-rendirme-25dn"
+            target="_blank" rel="noopener noreferrer">
+            <i class="bi bi-substack"></i>
+        </a>
+    </div>
+
+    <div class="derechos-de-autor">created by Laura Montironi (2025) &#169;</div>
+</footer>

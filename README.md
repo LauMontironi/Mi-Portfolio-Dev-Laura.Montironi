@@ -1,50 +1,56 @@
-# 🚀 Portafolio y Bitácora de Desarrollo Web FullStack
+🚀 Full Stack Journey: Portfolio & Dev Log
+¡Bienvenida/o a mi ecosistema digital! 🌐 Este repositorio es mucho más que un portafolio; es la bitácora viva de mi evolución como Desarrolladora Full Stack. Aquí documento mi transición desde el sector financiero hacia la arquitectura de software, enfrentando retos reales y construyendo soluciones escalables día a día.
 
-¡Bienvenido(a) a mi espacio digital! Este repositorio no es solo un portafolio; es la bitácora completa de mi viaje como desarrolladora. Aquí documento, en tiempo real, mi progreso y las habilidades que adquiero durante mi **Bootcamp FullStack**.
+"Mi objetivo: Transformar la lógica de negocio en experiencias digitales eficientes y escalables."
 
-Mi objetivo es claro: convertirme en una desarrolladora web competente, y este repositorio rastrea cada paso, desde los retos iniciales hasta las implementaciones más complejas.
+👤 Sobre Mí: Laura Montironi
+Desarrolladora Full Stack con mentalidad de analista financiera. Aporto una visión de negocio única a la programación, priorizando la eficiencia del sistema y la limpieza del código.
 
----
+Aprendizaje Activo: Documento cada bug resuelto como una lección aprendida.
 
-## 🌟 Sobre Mí
+Divulgadora Tech: Comparto mi proceso en Dev.to para ayudar a otros desarrolladores que empiezan desde cero.
+Blog: [https://dev.to/laumontironi/mi-camino-dev-blog-aprendiendo-a-programar-desde-cero-sin-rendirme-25dn]
 
-Soy **Laura Montironi**, una desarrolladora FullStack en formación.
+🛠️ Stack Tecnológico
+He seleccionado un stack moderno que me permite construir desde la lógica del servidor hasta interfaces de usuario dinámicas:
 
-Mi enfoque en el mundo Tech se centra en:
+Área Tecnologías Clave
+Frontend HTML5, CSS3 (Bootstrap), JavaScript (ES6+), Angular (Framework principal)
+Backend Python (FastAPI para desarrollo de APIs RESTful)
+Bases de Datos SQL (MySQL) y NoSQL (MongoDB)
+Herramientas Git/GitHub, Netlify (para despliegues), VS Code
 
-- **Aprendizaje Activo:** Documento mis retos y soluciones para afianzar el conocimiento.
-- **Comunidad:** Escribo para no olvidar mi camino y para guiar a otros que inician su carrera como desarrolladores web (ver mi [Blog en dev.to](https://dev.to/laumontironi/mi-camino-dev-blog-aprendiendo-a-programar-desde-cero-sin-rendirme-25dn)).
+🗺️ Estructura del Ecosistema
+Mis proyectos se dividen en pilares fundamentales que demuestran mi versatilidad:
 
----
+⚡ Lógica & Backend (Python / FastAPI)
+Arquitectura RESTful: Creación de APIs seguras y eficientes.
 
-## 🛠️ Stack Tecnológico
+Integración de Datos: Consumo de APIs externas (ej. CoinGecko) y persistencia en bases de datos.
 
-Las tecnologías que manejo y que se reflejan en los repositorios de mi cuenta:
+Seguridad: Implementación de autenticación JWT y hashing de contraseñas.
 
-| Área               | Tecnologías Clave                                                             |
-| :----------------- | :---------------------------------------------------------------------------- |
-| **Frontend**       | HTML5, CSS3 (Bootstrap), **JavaScript** (ES6+), Angular (Framework principal) |
-| **Backend**        | **Python** (FastAPI para desarrollo de APIs RESTful)                          |
-| **Bases de Datos** | SQL (MySQL) y NoSQL (MongoDB)                                                 |
-| **Herramientas**   | Git/GitHub, Netlify (para despliegues), VS Code                               |
+🎨 Web & Frontend (Angular)
+Interfaces Reactivas: Uso de Angular Signals y componentes independientes.
 
----
+UX/UI: Diseños responsive enfocados en la experiencia del usuario final.
 
-## 🗺️ Estructura del Portafolio y Repositorios
+SPA: Gestión avanzada de rutas y estados globales.
 
-Mi portafolio se construye a partir de los repositorios que encontrarás en mi perfil de GitHub. Cada carpeta y proyecto es un ejercicio práctico de las tecnologías del stack:
+🗄️ Gestión de Datos (SQL & NoSQL)
+Diseño de esquemas relacionales en MySQL para integridad de datos y colecciones flexibles en MongoDB.
 
-1.  **Lógica y Backend (Python):** Se exploran ejercicios de lógica, creación de APIs con **FastAPI** y el consumo de servicios externos (como la API de CoinGecko), demostrando un manejo sólido de la capa de servidor.
-2.  **Web y Frontend (JavaScript/Angular):** Proyectos enfocados en la manipulación del DOM, desarrollo de interfaces con **Angular** y uso de CSS/Bootstrap, incluyendo despliegues automáticos con **Netlify**.
-3.  **Gestión de Datos:** Implementaciones y prácticas con bases de datos SQL y NoSQL, esenciales para aplicaciones FullStack.
+Cada commit es una lección aprendida y un paso más en mi desarrollo profesional.
 
-**Cada _commit_ es una lección aprendida y un paso más en mi desarrollo profesional.**
+📈 Mi Diario de Aprendizaje
+No solo subo código final; subo procesos. Cada Commit representa un obstáculo superado. Puedes seguir mi evolución técnica paso a paso en mi blog: 👉 Blog: [https://dev.to/laumontironi/mi-camino-dev-blog-aprendiendo-a-programar-desde-cero-sin-rendirme-25dn]
 
-## ✉️ Contacto
+✉️ Contacto
 
-¡Me encantaría conectar! Si te interesa mi trabajo o mi experiencia, no dudes en contactarme.
+Estoy lista para aportar valor en entornos de desarrollo ágil y proyectos desafiantes.
 
-- **LinkedIn:** [www.linkedin.com/in/laura-montironi]
-- **Email:** [lau.montironi@gmail.com]
-- **GitHub:** [[LauMontironi](https://github.com/LauMontironi)]
-- **Blog:** [https://dev.to/laumontironi/mi-camino-dev-blog-aprendiendo-a-programar-desde-cero-sin-rendirme-25dn]
+LinkedIn: [www.linkedin.com/in/laura-montironi]
+Email: [lau.montironi@gmail.com]
+GitHub: [LauMontironi]
+
+Hecho con ☕ y muchas ganas de aprender por Laura Montironi
