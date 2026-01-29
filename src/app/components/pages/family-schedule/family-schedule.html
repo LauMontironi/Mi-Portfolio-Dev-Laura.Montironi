@@ -1,4 +1,4 @@
-<div class="container py-5 animate__animated animate__fadeIn">
+<div class="project-page container py-5 animate__animated animate__fadeIn">
     <header class="text-center mb-5">
         <span class="badge bg-primary mb-2">Full Stack Project</span>
         <h1 class="display-4 fw-bold">👨‍👩‍👧‍👦 Family Scheduler</h1>
@@ -6,16 +6,18 @@
             Una solución integral para la organización familiar que conecta una arquitectura robusta en
             <strong>FastAPI</strong> con una interfaz dinámica en <strong>Angular 18</strong>.
         </p>
+
         <div class="d-flex flex-column flex-md-row justify-content-center gap-3 mt-4 px-3">
-            <a href="https://family-scheduler-front.netlify.app" target="_blank" class="btn btn-dark px-4">
+            <a href="https://family-scheduler-front.netlify.app" target="_blank" class="btn btn-dark px-4"
+                rel="noopener">
                 <i class="bi bi-rocket-takeoff"></i> Live Demo
             </a>
             <a href="https://github.com/LauMontironi/Family-scheduler-project-Backend" target="_blank"
-                class="btn btn-outline-dark px-4">
+                class="btn btn-outline-dark px-4" rel="noopener">
                 <i class="bi bi-github"></i> Backend Code
             </a>
             <a href="https://github.com/LauMontironi/Family-scheduler-project-Frontend" target="_blank"
-                class="btn btn-outline-dark px-4">
+                class="btn btn-outline-dark px-4" rel="noopener">
                 <i class="bi bi-github"></i> Frontend Code
             </a>
         </div>
@@ -25,30 +27,43 @@
         <div class="col-md-6">
             <h2 class="fw-bold">El Concepto</h2>
             <p>Gestiona perfiles familiares y calendarios en un entorno seguro y privado.</p>
+
             <ul class="list-unstyled d-inline-block text-start">
-                <li><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Frontend:</strong> Angular &
-                    Signals</li>
-                <li><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Backend:</strong> FastAPI &
-                    Pydantic</li>
-                <li><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Seguridad:</strong> JWT & Argon2
+                <li>
+                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                    <strong>Frontend:</strong> HTML, CSS, Bootstrap & Angular
                 </li>
-                <li><i class="bi bi-check-circle-fill text-success me-2"></i><strong>DB:</strong> MySQL 8</li>
+                <li>
+                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                    <strong>Backend:</strong> Python & FastAPI
+                </li>
+                <li>
+                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                    <strong>Seguridad:</strong> JWT & Argon2
+                </li>
+                <li>
+                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                    <strong>DB:</strong> MySQL (Railway)
+                </li>
             </ul>
         </div>
+
         <div class="col-md-6">
             <div class="card shadow-sm border-0">
                 <img src="assets/projects/family-app-preview.jpg" class="card-img-top rounded shadow"
-                    alt="Landing Preview">
+                    alt="Landing Preview" />
             </div>
         </div>
     </section>
 
     <section class="mb-5">
         <h2 class="fw-bold mb-4 text-center">Arquitectura Técnica</h2>
+
         <div class="card border-dark shadow-sm">
             <div class="card-header bg-dark text-white text-center fw-bold py-3">
                 REST API Endpoints & Logic
             </div>
+
             <div class="card-body p-0 p-md-3">
                 <div class="table-responsive-custom">
                     <table class="table align-middle mb-0">
@@ -60,24 +75,60 @@
                                 <th>Lógica</th>
                             </tr>
                         </thead>
+
                         <tbody>
                             <tr>
                                 <td data-label="Módulo"><strong>Auth</strong></td>
                                 <td data-label="Método"><span class="badge bg-success">POST</span></td>
                                 <td data-label="Endpoint"><code>/auth/login</code></td>
-                                <td data-label="Lógica">JWT Auth</td>
+                                <td data-label="Lógica">JWT + Argon2</td>
                             </tr>
+
                             <tr>
                                 <td data-label="Módulo"><strong>Families</strong></td>
                                 <td data-label="Método"><span class="badge bg-primary">GET</span></td>
                                 <td data-label="Endpoint"><code>/families/my</code></td>
-                                <td data-label="Lógica">Filtro ID</td>
+                                <td data-label="Lógica">Familia del usuario logueado</td>
                             </tr>
+
+                            <tr>
+                                <td data-label="Módulo"><strong>Members</strong></td>
+                                <td data-label="Método"><span class="badge bg-primary">GET</span></td>
+                                <td data-label="Endpoint"><code>/fmembers/summary/all</code></td>
+                                <td data-label="Lógica">Dashboard (miembros + eventos)</td>
+                            </tr>
+
                             <tr>
                                 <td data-label="Módulo"><strong>Events</strong></td>
                                 <td data-label="Método"><span class="badge bg-warning text-dark">POST</span></td>
-                                <td data-label="Endpoint"><code>/events/&#123;id&#125;</code></td>
-                                <td data-label="Lógica">Logic Linked</td>
+                                <td data-label="Endpoint">
+                                    <code>/events/families/&#123;family_id&#125;/members/&#123;member_id&#125;/events</code>
+
+                                </td>
+                                <td data-label="Lógica">Crear evento asignado</td>
+                            </tr>
+
+                            <tr>
+                                <td data-label="Módulo"><strong>Events</strong></td>
+                                <td data-label="Método"><span class="badge bg-primary">GET</span></td>
+                                <td data-label="Endpoint"><code>/events/families/&#123;family_id&#125;</code></td>
+                                <td data-label="Lógica">Listar eventos por familia</td>
+                            </tr>
+
+                            <tr>
+                                <td data-label="Módulo"><strong>Events</strong></td>
+                                <td data-label="Método"><span class="badge bg-secondary">PUT</span></td>
+                                <td data-label="Endpoint"><code>/events/families/&#123;family_id&#125;/events/&#123;event_id&#125;</code>
+                                </td>
+                                <td data-label="Lógica">Actualizar evento</td>
+                            </tr>
+
+                            <tr>
+                                <td data-label="Módulo"><strong>Events</strong></td>
+                                <td data-label="Método"><span class="badge bg-danger">DELETE</span></td>
+                                <td data-label="Endpoint"><code>/events/families/&#123;family_id&#125;/events/&#123;event_id&#125;</code>
+                                </td>
+                                <td data-label="Lógica">Eliminar evento</td>
                             </tr>
                         </tbody>
                     </table>
@@ -92,7 +143,7 @@
         <div class="row align-items-center mb-5 text-center text-md-start">
             <div class="col-md-6 mb-4 mb-md-0">
                 <img src="assets/projects/family-app-preview.jpg" class="img-fluid rounded-3 shadow border"
-                    alt="Stage 1">
+                    alt="Stage 1" />
             </div>
             <div class="col-md-6 ps-md-5">
                 <h4 class="fw-bold text-primary">01. Landing & Concept</h4>
@@ -102,7 +153,7 @@
 
         <div class="row align-items-center mb-5 text-center text-md-end">
             <div class="col-md-6 order-md-2 mb-4 mb-md-0">
-                <img src="assets/projects/loginfamily.jpg" class="img-fluid rounded-3 shadow border" alt="Stage 2">
+                <img src="assets/projects/loginfamily.jpg" class="img-fluid rounded-3 shadow border" alt="Stage 2" />
             </div>
             <div class="col-md-6 order-md-1 pe-md-5">
                 <h4 class="fw-bold text-primary">02. Auth System</h4>
@@ -112,7 +163,7 @@
 
         <div class="row align-items-center mb-5 text-center text-md-start">
             <div class="col-md-6 mb-4 mb-md-0">
-                <img src="assets/projects/welcomefamily.jpg" class="img-fluid rounded-3 shadow border" alt="Stage 3">
+                <img src="assets/projects/welcomefamily.jpg" class="img-fluid rounded-3 shadow border" alt="Stage 3" />
             </div>
             <div class="col-md-6 ps-md-5">
                 <h4 class="fw-bold text-primary">03. Welcome & Onboarding</h4>
@@ -122,7 +173,8 @@
 
         <div class="row align-items-center mb-5 text-center text-md-end">
             <div class="col-md-6 order-md-2 mb-4 mb-md-0">
-                <img src="assets/projects/dashboardfamily.jpg" class="img-fluid rounded-3 shadow border" alt="Stage 4">
+                <img src="assets/projects/dashboardfamily.jpg" class="img-fluid rounded-3 shadow border"
+                    alt="Stage 4" />
             </div>
             <div class="col-md-6 order-md-1 pe-md-5">
                 <h4 class="fw-bold text-primary">04. Main Dashboard</h4>

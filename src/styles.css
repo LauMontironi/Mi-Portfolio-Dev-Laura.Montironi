@@ -1,4 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
 
+/* --- Reset y General --- */
+body {
+    background-color: #faf7f2 !important;
+    font-family: "Lato", sans-serif;
+    color: #1a1a1a;
+    overflow-x: hidden;
+    /* Evita scroll horizontal */
+}
 /* =========================
    Base / Global
 ========================= */

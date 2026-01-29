@@ -1,22 +1,22 @@
-/* --- Estilos Generales --- */
-.container {
+/* --- Estilos Generales (SCOPED) --- */
+.project-page {
     overflow-x: hidden;
 }
 
-h4.text-primary {
+.project-page h4.text-primary {
     color: #4f46e5 !important;
     letter-spacing: 1px;
 }
 
-img.rounded-3 {
+.project-page img.rounded-3 {
     transition: transform 0.3s ease;
 }
 
-img.rounded-3:hover {
+.project-page img.rounded-3:hover {
     transform: scale(1.02);
 }
 
-code {
+.project-page code {
     color: #e83e8c;
     background-color: #f8f9fa;
     padding: 2px 5px;
@@ -24,25 +24,24 @@ code {
 }
 
 /* --- TABLA RESPONSIVA PRO --- */
-.table-responsive-custom {
+.project-page .table-responsive-custom {
     width: 100%;
 }
 
 @media (max-width: 768px) {
-    .table-responsive-custom thead {
+    .project-page .table-responsive-custom thead {
         display: none;
-        /* Esconde cabecera en móvil */
     }
 
-    .table-responsive-custom,
-    .table-responsive-custom tbody,
-    .table-responsive-custom tr,
-    .table-responsive-custom td {
+    .project-page .table-responsive-custom,
+    .project-page .table-responsive-custom tbody,
+    .project-page .table-responsive-custom tr,
+    .project-page .table-responsive-custom td {
         display: block;
         width: 100%;
     }
 
-    .table-responsive-custom tr {
+    .project-page .table-responsive-custom tr {
         margin-bottom: 1rem;
         border: 1px solid #dee2e6;
         border-radius: 8px;
@@ -50,7 +49,7 @@ code {
         background: #fff;
     }
 
-    .table-responsive-custom td {
+    .project-page .table-responsive-custom td {
         text-align: right;
         padding: 10px 15px;
         position: relative;
@@ -58,12 +57,11 @@ code {
         border-bottom: 1px solid #eee;
     }
 
-    .table-responsive-custom td:last-child {
+    .project-page .table-responsive-custom td:last-child {
         border-bottom: none;
     }
 
-    /* Inserta los nombres de las columnas antes de cada dato */
-    .table-responsive-custom td::before {
+    .project-page .table-responsive-custom td::before {
         content: attr(data-label);
         position: absolute;
         left: 15px;
@@ -73,23 +71,18 @@ code {
         color: #6c757d;
     }
 
-    /* Centrado de textos y botones en móvil */
-    .row.text-center-sm {
-        text-align: center !important;
-    }
-
-    .display-4 {
+    .project-page .display-4 {
         font-size: 2.2rem;
     }
 
-    .btn {
+    .project-page .btn {
         width: 100%;
         margin-bottom: 5px;
     }
 }
 
 /* --- Animaciones --- */
-.animate__fadeIn {
+.project-page.animate__fadeIn {
     animation: fadeIn 0.6s ease-in;
 }
 
