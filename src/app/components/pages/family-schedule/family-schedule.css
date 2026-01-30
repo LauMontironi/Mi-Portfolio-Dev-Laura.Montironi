@@ -29,61 +29,88 @@
 }
 
 @media (max-width: 768px) {
+
+    /* Oculta encabezado */
     .project-page .table-responsive-custom thead {
         display: none;
     }
 
+    /* Forzamos estructura de "cards" */
     .project-page .table-responsive-custom,
-    .project-page .table-responsive-custom tbody,
-    .project-page .table-responsive-custom tr,
-    .project-page .table-responsive-custom td {
+    .project-page .table-responsive-custom tbody {
         display: block;
         width: 100%;
     }
 
     .project-page .table-responsive-custom tr {
-        margin-bottom: 1rem;
-        border: 1px solid #dee2e6;
-        border-radius: 8px;
-        padding: 10px;
+        display: block;
+        width: 100%;
+        margin: 0 0 1rem 0;
+        border: 1px solid #e9ecef;
+        border-radius: 12px;
         background: #fff;
+        overflow: hidden;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
     }
 
+    /* Cada celda ahora es una fila label/valor */
     .project-page .table-responsive-custom td {
-        text-align: right;
-        padding: 10px 15px;
-        position: relative;
+        display: grid;
+        grid-template-columns: 120px 1fr;
+        /* label / valor */
+        gap: 12px;
+        align-items: start;
+        padding: 12px 14px;
         border: none;
-        border-bottom: 1px solid #eee;
+        border-bottom: 1px solid #f1f3f5;
+        text-align: left;
+        /* importante para badges/codes */
     }
 
     .project-page .table-responsive-custom td:last-child {
         border-bottom: none;
     }
 
+    /* Label */
     .project-page .table-responsive-custom td::before {
         content: attr(data-label);
-        position: absolute;
-        left: 15px;
-        font-weight: bold;
+        font-weight: 700;
         text-transform: uppercase;
-        font-size: 0.75rem;
+        font-size: 0.72rem;
         color: #6c757d;
+        letter-spacing: 0.04em;
+        margin-top: 2px;
     }
 
+    /* Valor: que no se desborde */
+    .project-page .table-responsive-custom td>* {
+        min-width: 0;
+    }
+
+    /* Endpoints largos: wrap bonito */
+    .project-page .table-responsive-custom code {
+        display: inline-block;
+        max-width: 100%;
+        white-space: normal;
+        word-break: break-word;
+        overflow-wrap: anywhere;
+        line-height: 1.3;
+    }
+
+    /* Badges: que se vean centrados verticalmente */
+    .project-page .table-responsive-custom .badge {
+        justify-self: start;
+    }
+
+    /* Ajustes generales de header/buttons */
     .project-page .display-4 {
-        font-size: 2.2rem;
+        font-size: 2rem;
+        line-height: 1.15;
     }
 
     .project-page .btn {
         width: 100%;
-        margin-bottom: 5px;
     }
-}
-
-/* --- Animaciones --- */
-.project-page.animate__fadeIn {
-    animation: fadeIn 0.6s ease-in;
 }
 
 @keyframes fadeIn {
@@ -96,4 +123,13 @@
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+.project-page .table-responsive-custom table {
+    width: 100%;
+}
+
+.project-page .table-responsive-custom th,
+.project-page .table-responsive-custom td {
+    vertical-align: middle;
 }
