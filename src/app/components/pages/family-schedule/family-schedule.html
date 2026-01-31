@@ -1,10 +1,14 @@
 <div class="project-page container py-5 animate__animated animate__fadeIn">
+
+    <!-- HEADER -->
     <header class="text-center mb-5">
         <span class="badge bg-primary mb-2">Full Stack Project</span>
+
         <h1 class="display-4 fw-bold">👨‍👩‍👧‍👦 Family Scheduler</h1>
+
         <p class="lead text-muted mx-auto" style="max-width: 700px;">
             Una solución integral para la organización familiar que conecta una arquitectura robusta en
-            <strong>FastAPI</strong> con una interfaz dinámica en <strong>Angular 18</strong>.
+            <strong>FastAPI</strong> con una interfaz dinámica en <strong>Angular</strong>.
         </p>
 
         <div class="d-flex flex-column flex-md-row justify-content-center gap-3 mt-4 px-3">
@@ -12,10 +16,12 @@
                 rel="noopener">
                 <i class="bi bi-rocket-takeoff"></i> Live Demo
             </a>
+
             <a href="https://github.com/LauMontironi/Family-scheduler-project-Backend" target="_blank"
                 class="btn btn-outline-dark px-4" rel="noopener">
                 <i class="bi bi-github"></i> Backend Code
             </a>
+
             <a href="https://github.com/LauMontironi/Family-scheduler-project-Frontend" target="_blank"
                 class="btn btn-outline-dark px-4" rel="noopener">
                 <i class="bi bi-github"></i> Frontend Code
@@ -23,45 +29,82 @@
         </div>
     </header>
 
-    <section class="row mb-5 align-items-center g-4 text-center text-md-start">
-        <div class="col-md-6">
-            <h2 class="fw-bold">El Concepto</h2>
-            <p>Gestiona perfiles familiares y calendarios en un entorno seguro y privado.</p>
+    <!-- CONCEPTO -->
+    <section class="project-details mb-5">
 
-            <ul class="list-unstyled d-inline-block text-start">
-                <li>
-                    <i class="bi bi-check-circle-fill text-success me-2"></i>
-                    <strong>Frontend:</strong> HTML, CSS, Bootstrap & Angular
-                </li>
-                <li>
-                    <i class="bi bi-check-circle-fill text-success me-2"></i>
-                    <strong>Backend:</strong> Python & FastAPI
-                </li>
-                <li>
-                    <i class="bi bi-check-circle-fill text-success me-2"></i>
-                    <strong>Seguridad:</strong> JWT & Argon2
-                </li>
-                <li>
-                    <i class="bi bi-check-circle-fill text-success me-2"></i>
-                    <strong>DB:</strong> MySQL (Railway)
-                </li>
-            </ul>
-        </div>
+        <h2>🚀 Desarrollo de Aplicación Full-Stack – Gestor Familiar de Eventos</h2>
 
-        <div class="col-md-6">
-            <div class="card shadow-sm border-0">
-                <img src="assets/projects/family-app-preview.jpg" class="card-img-top rounded shadow"
-                    alt="Landing Preview" />
+        <p>
+            Este proyecto consiste en una aplicación web para la gestión de familias, miembros y eventos,
+            desarrollada con arquitectura full-stack, autenticación segura y base de datos relacional en la nube.
+        </p>
+
+        <h3>🗄️ Backend y Base de Datos</h3>
+        <ul>
+            <li>Base de datos relacional en <strong>SQL</strong> con relaciones entre usuarios, familias, miembros y
+                eventos.</li>
+            <li>Base de datos desplegada en servidor online <strong>Railway</strong>.</li>
+            <li>API REST desarrollada con <strong>FastAPI</strong>.</li>
+            <li>CRUD completo con peticiones <code>GET</code>, <code>POST</code>, <code>PUT</code> y
+                <code>DELETE</code>.</li>
+            <li>Validación de datos usando <strong>Pydantic</strong>.</li>
+            <li>Conexión asíncrona con <code>aiomysql</code>.</li>
+            <li>Gestión de entorno virtual y dependencias.</li>
+        </ul>
+
+        <h3>🔐 Seguridad y Autenticación</h3>
+        <ul>
+            <li>Hash de contraseñas con <code>passlib</code> y algoritmo <strong>Argon2</strong>.</li>
+            <li>Autenticación con <strong>OAuth2 + JWT</strong>.</li>
+            <li>Dependencias de seguridad en FastAPI para proteger rutas privadas.</li>
+            <li>Cada usuario solo puede acceder a los datos de su familia.</li>
+        </ul>
+
+        <h3>🎨 Frontend con Angular</h3>
+        <ul>
+            <li>Aplicación desarrollada con <strong>Angular</strong>.</li>
+            <li>Navegación con <strong>Angular Router</strong>.</li>
+            <li>Formularios con <strong>FormsModule</strong>.</li>
+            <li>Two-way data binding.</li>
+            <li>Comunicación entre componentes con <code>@Input()</code> y <code>@Output()</code>.</li>
+            <li>Uso de <strong>Signals</strong>.</li>
+            <li>Validación de formularios en cliente.</li>
+            <li>Consumo de API mediante <strong>HTTP Client</strong>.</li>
+            <li>Control flow moderno con <code>&#64;if</code>, <code>&#64;for</code>, <code>&#64;switch</code>.</li>
+            <li>Uso de variables como <code>$index</code> y <code>$even</code>.</li>
+            <li>Formateo de fechas con <strong>Date Pipe</strong>.</li>
+        </ul>
+
+        <h3>🧠 Aprendizajes Clave</h3>
+        <ul>
+            <li>La base de datos debía estar en un servidor online para que el frontend funcionara.</li>
+            <li>Tuve que reducir la sobre-normalización para simplificar el consumo desde el frontend.</li>
+            <li>Al registrarse, el usuario debe crear su familia base.</li>
+            <li>Los selectores deben filtrar por familia del usuario autenticado.</li>
+            <li>Si el usuario ya tiene familia, entra directamente sin volver a crearla.</li>
+        </ul>
+
+    </section>
+
+    <!-- IMAGEN PREVIEW -->
+    <section class="mb-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card shadow-sm border-0">
+                    <img src="assets/projects/family-app-preview.jpg" class="card-img-top rounded shadow"
+                        alt="Landing Preview">
+                </div>
             </div>
         </div>
     </section>
 
+    <!-- ARQUITECTURA -->
     <section class="mb-5">
         <h2 class="fw-bold mb-4 text-center">Arquitectura Técnica</h2>
 
         <div class="card border-dark shadow-sm">
             <div class="card-header bg-dark text-white text-center fw-bold py-3">
-                REST API Endpoints & Logic
+                REST API Endpoints &amp; Logic
             </div>
 
             <div class="card-body p-0 p-md-3">
@@ -75,60 +118,36 @@
                                 <th>Lógica</th>
                             </tr>
                         </thead>
-
                         <tbody>
                             <tr>
-                                <td data-label="Módulo"><strong>Auth</strong></td>
-                                <td data-label="Método"><span class="badge bg-success">POST</span></td>
-                                <td data-label="Endpoint"><code>/auth/login</code></td>
-                                <td data-label="Lógica">JWT + Argon2</td>
+                                <td><strong>Auth</strong></td>
+                                <td><span class="badge bg-success">POST</span></td>
+                                <td><code>/auth/login</code></td>
+                                <td>Login con JWT y hash Argon2</td>
                             </tr>
-
                             <tr>
-                                <td data-label="Módulo"><strong>Families</strong></td>
-                                <td data-label="Método"><span class="badge bg-primary">GET</span></td>
-                                <td data-label="Endpoint"><code>/families/my</code></td>
-                                <td data-label="Lógica">Familia del usuario logueado</td>
+                                <td><strong>Families</strong></td>
+                                <td><span class="badge bg-warning text-dark">POST</span></td>
+                                <td><code>/families/</code></td>
+                                <td>Crear nueva familia</td>
                             </tr>
-
                             <tr>
-                                <td data-label="Módulo"><strong>Members</strong></td>
-                                <td data-label="Método"><span class="badge bg-primary">GET</span></td>
-                                <td data-label="Endpoint"><code>/fmembers/summary/all</code></td>
-                                <td data-label="Lógica">Dashboard (miembros + eventos)</td>
+                                <td><strong>Members</strong></td>
+                                <td><span class="badge bg-primary">GET</span></td>
+                                <td><code>/fmembers/families/&#123;family_id&#125;</code></td>
+                                <td>Miembros por familia</td>
                             </tr>
-
                             <tr>
-                                <td data-label="Módulo"><strong>Events</strong></td>
-                                <td data-label="Método"><span class="badge bg-warning text-dark">POST</span></td>
-                                <td data-label="Endpoint">
-                                    <code>/events/families/&#123;family_id&#125;/members/&#123;member_id&#125;/events</code>
-
-                                </td>
-                                <td data-label="Lógica">Crear evento asignado</td>
+                                <td><strong>Events</strong></td>
+                                <td><span class="badge bg-primary">GET</span></td>
+                                <td><code>/events/families/&#123;family_id&#125;</code></td>
+                                <td>Eventos por familia</td>
                             </tr>
-
                             <tr>
-                                <td data-label="Módulo"><strong>Events</strong></td>
-                                <td data-label="Método"><span class="badge bg-primary">GET</span></td>
-                                <td data-label="Endpoint"><code>/events/families/&#123;family_id&#125;</code></td>
-                                <td data-label="Lógica">Listar eventos por familia</td>
-                            </tr>
-
-                            <tr>
-                                <td data-label="Módulo"><strong>Events</strong></td>
-                                <td data-label="Método"><span class="badge bg-secondary">PUT</span></td>
-                                <td data-label="Endpoint"><code>/events/families/&#123;family_id&#125;/events/&#123;event_id&#125;</code>
-                                </td>
-                                <td data-label="Lógica">Actualizar evento</td>
-                            </tr>
-
-                            <tr>
-                                <td data-label="Módulo"><strong>Events</strong></td>
-                                <td data-label="Método"><span class="badge bg-danger">DELETE</span></td>
-                                <td data-label="Endpoint"><code>/events/families/&#123;family_id&#125;/events/&#123;event_id&#125;</code>
-                                </td>
-                                <td data-label="Lógica">Eliminar evento</td>
+                                <td><strong>Events</strong></td>
+                                <td><span class="badge bg-danger">DELETE</span></td>
+                                <td><code>/events/families/&#123;family_id&#125;/events/&#123;event_id&#125;</code></td>
+                                <td>Eliminar evento</td>
                             </tr>
                         </tbody>
                     </table>
@@ -137,55 +156,124 @@
         </div>
     </section>
 
+    <!-- IMPLEMENTACIÓN VISUAL -->
     <section class="mb-5 px-2">
         <h2 class="fw-bold text-center mb-5">Current Implementation</h2>
 
+        <!-- Secciones con imágenes -->
         <div class="row align-items-center mb-5 text-center text-md-start">
             <div class="col-md-6 mb-4 mb-md-0">
-                <img src="assets/projects/family-app-preview.jpg" class="img-fluid rounded-3 shadow border"
-                    alt="Stage 1" />
+                <img src="assets/projects/family-app-preview.jpg" class="img-fluid rounded-3 shadow border">
             </div>
             <div class="col-md-6 ps-md-5">
-                <h4 class="fw-bold text-primary">01. Landing & Concept</h4>
-                <p>Presentación de la propuesta de valor centrada en la organización familiar.</p>
+                <h4 class="fw-bold text-primary">01. Landing &amp; Concept</h4>
+                <p>Página de presentación con enfoque UX centrado en familias.</p>
             </div>
         </div>
 
         <div class="row align-items-center mb-5 text-center text-md-end">
             <div class="col-md-6 order-md-2 mb-4 mb-md-0">
-                <img src="assets/projects/loginfamily.jpg" class="img-fluid rounded-3 shadow border" alt="Stage 2" />
+                <img src="assets/projects/loginfamily.jpg" class="img-fluid rounded-3 shadow border">
             </div>
             <div class="col-md-6 order-md-1 pe-md-5">
-                <h4 class="fw-bold text-primary">02. Auth System</h4>
-                <p>Flujo de autenticación seguro con encriptación Argon2 y tokens JWT.</p>
+                <h4 class="fw-bold text-primary">02. Sistema de Autenticación</h4>
+                <p>Registro y login con JWT.</p>
             </div>
         </div>
 
         <div class="row align-items-center mb-5 text-center text-md-start">
             <div class="col-md-6 mb-4 mb-md-0">
-                <img src="assets/projects/welcomefamily.jpg" class="img-fluid rounded-3 shadow border" alt="Stage 3" />
+                <img src="assets/projects/demo.jpg" class="img-fluid rounded-3 shadow border">
             </div>
             <div class="col-md-6 ps-md-5">
-                <h4 class="fw-bold text-primary">03. Welcome & Onboarding</h4>
-                <p>Gestión de contexto familiar e inyección de estado global.</p>
+                <h4 class="fw-bold text-primary">03. Welcome &amp; Creación de Familia</h4>
+                <p>Creación del núcleo familiar inicial.</p>
             </div>
         </div>
 
         <div class="row align-items-center mb-5 text-center text-md-end">
             <div class="col-md-6 order-md-2 mb-4 mb-md-0">
-                <img src="assets/projects/dashboardfamily.jpg" class="img-fluid rounded-3 shadow border"
-                    alt="Stage 4" />
+                <img src="assets/projects/familydashboard.jpg" class="img-fluid rounded-3 shadow border">
             </div>
             <div class="col-md-6 order-md-1 pe-md-5">
-                <h4 class="fw-bold text-primary">04. Main Dashboard</h4>
-                <p>Interfaz reactiva para la gestión de eventos y miembros mediante Signals.</p>
+                <h4 class="fw-bold text-primary">04. Dashboard Familiar</h4>
+                <p>Visualización de miembros y niños.</p>
+            </div>
+        </div>
+
+        <div class="row align-items-center mb-5 text-center text-md-start">
+            <div class="col-md-6 mb-4 mb-md-0">
+                <img src="assets/projects/Create_member.jpg" class="img-fluid rounded-3 shadow border">
+            </div>
+            <div class="col-md-6 ps-md-5">
+                <h4 class="fw-bold text-primary">05. Creación de Miembros</h4>
+                <p>Formulario dinámico.</p>
+            </div>
+        </div>
+
+        <div class="row align-items-center mb-5 text-center text-md-end">
+            <div class="col-md-6 order-md-2 mb-4 mb-md-0">
+                <img src="assets/projects/eventos-dashboard.jpg" class="img-fluid rounded-3 shadow border">
+            </div>
+            <div class="col-md-6 order-md-1 pe-md-5">
+                <h4 class="fw-bold text-primary">06. Panel de Eventos</h4>
+                <p>Eventos organizados por miembro.</p>
+            </div>
+        </div>
+
+        <div class="row align-items-center mb-5 text-center text-md-start">
+            <div class="col-md-6 mb-4 mb-md-0">
+                <img src="assets/projects/crear-evento.jpg" class="img-fluid rounded-3 shadow border">
+            </div>
+            <div class="col-md-6 ps-md-5">
+                <h4 class="fw-bold text-primary">07. Creación de Eventos</h4>
+                <p>Formulario de eventos familiares.</p>
             </div>
         </div>
     </section>
+<!-- DEMO DEL PROYECTO -->
+<section class="mb-5">
+    <h2 class="fw-bold text-center mb-4">🔐 Demo del Proyecto</h2>
 
+    <p class="text-center">
+        Puedes probar la aplicación con un usuario de demostración:
+    </p>
+
+    <div class="text-center mb-4">
+        <p class="mb-1"><strong>Usuario:</strong> laura.lopez@demo.com</p>
+        <p><strong>Password:</strong> Demo1234!</p>
+    </div>
+
+    <div class="d-flex flex-column flex-md-row justify-content-center gap-3">
+        <a href="https://family-scheduler-front.netlify.app/" target="_blank" rel="noopener" class="btn btn-dark px-4">
+            🌍 Ver App en Vivo
+        </a>
+
+        <a href="https://github.com/LauMontironi/Family-scheduler-project-Frontend" target="_blank" rel="noopener"
+            class="btn btn-outline-dark px-4">
+            💻 Código Frontend
+        </a>
+
+        <a href="https://github.com/LauMontironi/Family-scheduler-project-Backend" target="_blank" rel="noopener"
+            class="btn btn-outline-dark px-4">
+            🧠 Código Backend
+        </a>
+        <a href="https://dev.to/laumontironi/de-nuevo-estoy-de-vuelta-y-js-disfrazado-de-ts-riendose-en-mi-cara-n3h" target="_blank" rel="noopener"
+            class="btn btn-outline-dark px-4">
+            📔 Proceso parte 1
+        </a>
+        <a href="https://dev.to/laumontironi/parte-2-del-caos-al-click-mental-conectar-angular-con-el-mundo-real-y-sobrevivir-55fc" target="_blank" rel="noopener"
+            class="btn btn-outline-dark px-4">
+            📔 Proceso parte 2
+        </a>
+    </div>
+</section>
+
+    <!-- FOOTER -->
     <footer class="text-center py-4 border-top">
         <button routerLink="/" class="btn btn-outline-dark btn-sm rounded-pill px-4">
             <i class="bi bi-arrow-left"></i> Volver al Portfolio
         </button>
     </footer>
+
 </div>
