@@ -9,7 +9,7 @@ Desarrolladora Full Stack con mentalidad de analista financiera. Aporto una visi
 Aprendizaje Activo: Documento cada bug resuelto como una lección aprendida.
 
 Divulgadora Tech: Comparto mi proceso en Dev.to para ayudar a otros desarrolladores que empiezan desde cero.
-Blog: [https://dev.to/laumontironi/mi-camino-dev-blog-aprendiendo-a-programar-desde-cero-sin-rendirme-25dn]
+Blog: [https://mi-camino-dev-blog.vercel.app/]
 
 🛠️ Stack Tecnológico
 He seleccionado un stack moderno que me permite construir desde la lógica del servidor hasta interfaces de usuario dinámicas:
@@ -43,7 +43,7 @@ Diseño de esquemas relacionales en MySQL para integridad de datos y colecciones
 Cada commit es una lección aprendida y un paso más en mi desarrollo profesional.
 
 📈 Mi Diario de Aprendizaje
-No solo subo código final; subo procesos. Cada Commit representa un obstáculo superado. Puedes seguir mi evolución técnica paso a paso en mi blog: 👉 Blog: [https://dev.to/laumontironi/mi-camino-dev-blog-aprendiendo-a-programar-desde-cero-sin-rendirme-25dn]
+No solo subo código final; subo procesos. Cada Commit representa un obstáculo superado. Puedes seguir mi evolución técnica paso a paso en mi blog: 👉 Blog: [https://mi-camino-dev-blog.vercel.app/]
 
 ✉️ Contacto
 

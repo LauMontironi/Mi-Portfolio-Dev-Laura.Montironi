@@ -83,5 +83,32 @@ export const PROJECTS: Project[] = [
     githubUrl: "https://github.com/LauMontironi/Card-Builder-Angular-Project",
     blogUrl: "https://dev.to/laumontironi/angular-y-el-laberinto-tech-con-ia-todo-es-mejor-1foi",
     liveUrl: "https://angularcardbuilder.netlify.app/"
-  }
+  },
+  {
+    id: 11,
+    title: "🧪 FamilySchedule Lab · Angular Experiments",
+    description: "This repository is the training and experimentation lab for my main project FamilySchedule. It’s where I test new Angular features and component logic before integrating them into the final application architecture.",
+    imageUrl: "assets/projects/family-lab.jpg",
+    githubUrl: "https://github.com/LauMontironi/Practice-Lab",
+    blogUrl: "https://dev.to/laumontironi/de-nuevo-estoy-de-vuelta-y-js-disfrazado-de-ts-riendose-en-mi-cara-n3h",
+    liveUrl: "https://practice-lab-vert.vercel.app/"
+  },
+   {
+    id: 12,
+    title: "🗓️ FamilySchedule: Gestión Familiar Pro",
+    description: "App Fullstack con Angular y FastAPI: incluye FullCalendar para eventos, autenticación segura con Passlib (Argon2) y base de datos en Railway.",
+    imageUrl: "assets/projects/family-app-preview.jpg",
+    githubUrl: "https://github.com/LauMontironi/Family-scheduler-project-Backend",
+    blogUrl: "https://dev.to/laumontironi/parte-2-del-caos-al-click-mental-conectar-angular-con-el-mundo-real-y-sobrevivir-55fc",
+    liveUrl: "https://family-scheduler-project.vercel.app/"
+  },
+  //   {
+  //   id: 13,
+  //   title: "👩‍💼 Employee Portal: Gestión de Personal",
+  //   description: "Aplicación SPA desarrollada con Angular donde se pueden registrar empleados con preview en tiempo real, gestionar un listado dinámico y asignar tareas por trabajador. Arquitectura preparada para conexión con APIs externas y manejo de estado con servicios.",
+  //   imageUrl: "assets/projects/employee-portal.jpg",
+  //   githubUrl: "https://github.com/LauMontironi/Family-scheduler-project-Backend",
+  //   blogUrl: "https://dev.to/laumontironi/parte-2-del-caos-al-click-mental-conectar-angular-con-el-mundo-real-y-sobrevivir-55fc",
+  //   liveUrl: "https://family-scheduler-front.netlify.app/"
+  // }
 ];
