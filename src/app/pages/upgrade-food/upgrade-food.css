@@ -1,0 +1,77 @@
+/* ============================= */
+/* PROJECT PAGE (shared style) */
+/* ============================= */
+
+.project-page {
+    color: rgba(229, 231, 235, 0.92);
+}
+
+.project-page h1,
+.project-page h2,
+.project-page h3,
+.project-page h4,
+.project-page .fw-bold {
+    color: #fff;
+}
+
+.project-page .text-muted,
+.project-page .lead.text-muted {
+    color: rgba(229, 231, 235, 0.72) !important;
+}
+
+.project-page header {
+    padding: 28px 18px;
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    backdrop-filter: blur(10px);
+}
+
+.project-page section {
+    padding: 26px 0;
+}
+
+.project-page .card {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.10) !important;
+    color: rgba(229, 231, 235, 0.92);
+    border-radius: 18px;
+}
+
+.project-page .card .text-muted {
+    color: rgba(229, 231, 235, 0.70) !important;
+}
+
+.project-page ul li {
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+.project-page img {
+    border-radius: 18px !important;
+}
+
+.project-page footer {
+    border-top-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+/* Buttons: que no choquen con el dark */
+.project-page .btn-outline-dark {
+    border-color: rgba(255, 255, 255, 0.22) !important;
+    color: #fff !important;
+}
+
+.project-page .btn-outline-dark:hover {
+    background: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Responsive tightening */
+@media (max-width: 768px) {
+    .project-page header {
+        padding: 22px 14px;
+    }
+
+    .project-page .btn {
+        width: 100%;
+    }
+}

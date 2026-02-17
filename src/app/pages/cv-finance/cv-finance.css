@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap');
+
+/* ============================= */
+/* BASE */
+/* ============================= */
+
+.finance-page {
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+    padding: 60px 20px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 22px;
+    backdrop-filter: blur(10px);
+    color: rgba(229, 231, 235, 0.92);
+}
+
+/* ============================= */
+/* HEADER */
+/* ============================= */
+
+.presentacion h1 {
+    font-weight: 900;
+    font-size: clamp(2.2rem, 6vw, 3.5rem);
+    letter-spacing: -1px;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.subtitle {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: rgba(229, 231, 235, 0.75);
+    max-width: 900px;
+    margin: 0 auto;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 0 14px;
+    line-height: 1.4;
+}
+
+/* ============================= */
+/* TOP BUTTONS */
+/* ============================= */
+
+.btn.btn-outline-dark {
+    border-radius: 999px;
+    padding: 10px 18px;
+    font-weight: 600;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: #ffffff;
+    transition: all 0.2s ease;
+}
+
+.btn.btn-outline-dark:hover,
+.btn.btn-outline-dark.active {
+    background: rgba(79, 70, 229, 0.25);
+    border-color: rgba(79, 70, 229, 0.6);
+    transform: translateY(-2px);
+}
+
+/* ============================= */
+/* CARDS */
+/* ============================= */
+
+.card-simple {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    border-radius: 18px;
+    padding: 35px;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.25);
+    margin-bottom: 2rem;
+    color: rgba(229, 231, 235, 0.95);
+}
+
+.card-simple h2 {
+    color: #ffffff;
+    font-weight: 800;
+}
+
+/* ============================= */
+/* AVATAR */
+/* ============================= */
+
+.avatar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 28px;
+}
+
+.avatar-img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: transparent;
+    display: block;
+    border: none;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+    transition: transform 0.25s ease;
+}
+
+.avatar-img:hover {
+    transform: scale(1.05);
+}
+
+/* ============================= */
+/* LISTS (skills / education) */
+/* ============================= */
+
+.text-center-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.text-center-list li {
+    margin-bottom: 12px;
+    font-size: 1rem;
+    line-height: 1.6;
+    opacity: 0.95;
+}
+
+/* Education details */
+.edu-details {
+    display: block;
+    margin-top: 6px;
+    font-size: 0.9rem;
+    color: rgba(229, 231, 235, 0.70);
+}
+
+.meta-label {
+    font-style: italic;
+    font-weight: 700;
+    color: #93c5fd;
+    margin-right: 6px;
+}
+
+/* ============================= */
+/* CONTACT */
+/* ============================= */
+
+.contact-info p {
+    margin: 0 0 10px 0;
+    font-weight: 600;
+    color: rgba(229, 231, 235, 0.92);
+}
+
+/* ============================= */
+/* SECTION TOGGLE HEADERS */
+/* ============================= */
+
+.btn-section-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 14px;
+    padding: 16px 22px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 18px;
+    font-size: 1.05rem;
+    font-weight: 800;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    color: #ffffff;
+}
+
+.btn-section-header:hover {
+    background: rgba(255, 255, 255, 0.09);
+    transform: translateY(-2px);
+}
+
+.header-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex: 0 0 auto;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Importante para que el texto no "se coma" el chevron en móvil */
+.btn-section-header span {
+    flex: 1;
+    min-width: 0;
+}
+
+/* ============================= */
+/* EXPERIENCE */
+/* ============================= */
+
+.exp-article {
+    padding: 18px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+.exp-article:last-child {
+    border-bottom: none;
+}
+
+.exp-article h3 {
+    font-weight: 800;
+    font-size: 1.15rem;
+    color: #ffffff;
+    margin-bottom: 8px;
+}
+
+.exp-meta {
+    font-size: 0.9rem;
+    color: rgba(229, 231, 235, 0.70);
+    margin-bottom: 12px;
+}
+
+/* List inside experience */
+.exp-article ul {
+    margin: 0;
+    padding-left: 18px;
+}
+
+.exp-article li {
+    margin-bottom: 8px;
+    line-height: 1.6;
+    opacity: 0.95;
+}
+
+/* ============================= */
+/* FOOTER */
+/* ============================= */
+
+footer {
+    color: rgba(229, 231, 235, 0.85);
+}
+
+/* ============================= */
+/* RESPONSIVE */
+/* ============================= */
+
+@media (max-width: 768px) {
+    .card-simple {
+        padding: 20px 16px;
+    }
+
+    .btn-section-header {
+        padding: 14px 16px;
+        font-size: 1rem;
+    }
+
+    .subtitle {
+        font-size: 0.85rem;
+    }
+
+    .avatar-img {
+        width: 140px;
+        height: 140px;
+    }
+}
