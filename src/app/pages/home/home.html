@@ -1,5 +1,5 @@
 <!-- Navbar (minimal) -->
-<nav class="navbar navbar-expand-md navbar-light">
+<nav class="navbar navbar-expand-md navbar-dark">
     <div class="container-fluid">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggler"
             aria-controls="navbar-toggler" aria-expanded="false" aria-label="Toggle navigation">
@@ -8,10 +8,10 @@
 
         <div class="collapse navbar-collapse" id="navbar-toggler">
             <a class="navbar-brand" href="#">
-                <img src="assets/code-square.svg" width="50" alt="Website logo">
+                <img src="assets/images/code-square.svg" width="50" alt="Website logo">
             </a>
 
-            <ul class="navbar-nav d-flex justify-content-center align-items-center">
+            <ul class="navbar-nav ms-auto d-flex align-items-center gap-2">
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#about">About</a>
                 </li>
@@ -42,8 +42,8 @@
     <div class="container hero-minimal__wrap d-flex flex-column flex-md-row align-items-center justify-content-center">
         <div class="hero-minimal__photo">
             <div class="profile-flip">
-                <img src="assets/Perfil.jpg" alt="Laura Montironi" class="front" />
-                <img src="assets/perfil_avatar.png" alt="Avatar" class="back" />
+                <img src="assets/images/Perfil.jpg" alt="Laura Montironi" class="front" />
+                <img src="assets/images/perfil_avatar.png" alt="Avatar" class="back" />
             </div>
 
         </div>
@@ -102,40 +102,75 @@
 
 <section id="featured-project" class="py-5">
     <div class="container">
-        <h2 class="section-min-title text-center mb-5">🚀 Star Project</h2>
+        <h2 class="section-min-title text-center mb-5">🚀 Star Projects</h2>
 
-        <div class="featured-card-wrapper" routerLink="/family-schedule">
+        <!-- 1) UpgradeFood -->
+        <div class="featured-card-wrapper mb-4" routerLink="/upgradefood">
             <div class="featured-badge">Full Stack Developer</div>
 
             <div class="row g-0 align-items-center">
-
                 <div class="col-lg-5">
                     <div class="featured-image-container">
-                        <img src="assets/projects/family-app-preview.jpg" alt="Family Schedule App" class="img-fluid">
+                        <img src="assets/projects/upgrade_food.jpg" alt="UpgradeFood App" class="img-fluid" />
                     </div>
                 </div>
 
                 <div class="col-lg-7 p-4 p-md-5">
-                    <h3 class="display-6 fw-bold mb-3">Family Schedule </h3>
+                    <h3 class="display-6 fw-bold mb-3">UpgradeFood</h3>
                     <p class="lead text-muted">
-                        An integral system to sync family schedules. Built from scratch combining
-                        business logic with modern web architecture.
+                        <!-- editame -->
+                        Plataforma full-stack para /* objetivo */, conectando UX + lógica + datos reales.
                     </p>
 
                     <div class="tech-stack-pills mb-4">
-                        <span class="badge rounded-pill bg-primary">FastAPI (Python)</span>
-                        <span class="badge rounded-pill bg-info text-dark">Angular (HTML/CSS)</span>
+                        <span class="badge rounded-pill bg-primary">FastAPI</span>
+                        <span class="badge rounded-pill bg-info text-dark">Angular</span>
+                        <span class="badge rounded-pill bg-dark">MySQL (Aiven)</span>
+                        <span class="badge rounded-pill bg-secondary">JWT + Roles</span>
+                        <span class="badge rounded-pill bg-success">Cloudinary</span>
+                        <span class="badge rounded-pill bg-warning text-dark">Resend (Email API)</span>
+                    </div>
+
+                    <button class="btn btn-dark btn-lg" routerLink="/upgrade-food">
+                        Explore Project <i class="bi bi-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2) Family Scheduler -->
+        <div class="featured-card-wrapper" routerLink="/family-schedule">
+            <div class="featured-badge">Full Stack Developer</div>
+
+            <div class="row g-0 align-items-center">
+                <div class="col-lg-5">
+                    <div class="featured-image-container">
+                        <img src="assets/projects/family-app-preview.jpg" alt="Family Scheduler App"
+                            class="img-fluid" />
+                    </div>
+                </div>
+
+                <div class="col-lg-7 p-4 p-md-5">
+                    <h3 class="display-6 fw-bold mb-3">Family Scheduler</h3>
+                    <p class="lead text-muted">
+                        An integral system to sync family schedules. Built from scratch combining business logic with
+                        modern web architecture.
+                    </p>
+
+                    <div class="tech-stack-pills mb-4">
+                        <span class="badge rounded-pill bg-primary">FastAPI</span>
+                        <span class="badge rounded-pill bg-info text-dark">Angular</span>
                         <span class="badge rounded-pill bg-dark">SQL</span>
-                        <span class="badge rounded-pill bg-secondary">JWT Auth</span>
+                        <span class="badge rounded-pill bg-secondary">JWT</span>
                     </div>
 
                     <button class="btn btn-dark btn-lg">
-                        Explore Project Process <i class="bi bi-arrow-right"></i>
+                        Explore Project <i class="bi bi-arrow-right"></i>
                     </button>
                 </div>
-
             </div>
         </div>
+
     </div>
 </section>
 

@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap');
+
+/* ============================= */
+/* BASE */
+/* ============================= */
+
+.tech-page {
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+    padding: 60px 20px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 22px;
+    backdrop-filter: blur(10px);
+    color: rgba(229, 231, 235, 0.92);
+}
+
+/* ============================= */
+/* HEADER */
+/* ============================= */
+
+.main-name {
+    font-weight: 900;
+    font-size: clamp(2.2rem, 6vw, 3.5rem);
+    letter-spacing: -1px;
+    color: #ffffff;
+}
+
+.tech-subtitle {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #93c5fd;
+    letter-spacing: 2px;
+}
+
+/* ============================= */
+/* BOTONES SUPERIORES */
+/* ============================= */
+
+.btn-tech {
+    border-radius: 999px;
+    padding: 10px 20px;
+    font-weight: 600;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: #ffffff;
+    transition: all 0.2s ease;
+}
+
+.btn-tech:hover,
+.btn-tech.active {
+    background: rgba(79, 70, 229, 0.25);
+    border-color: rgba(79, 70, 229, 0.6);
+    transform: translateY(-2px);
+}
+
+/* ============================= */
+/* CARDS */
+/* ============================= */
+
+.card-tech,
+.card-tech-content {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    border-radius: 18px;
+    padding: 35px;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.25);
+    color: rgba(229, 231, 235, 0.95);
+}
+
+/* ============================= */
+/* AVATAR */
+/* ============================= */
+
+.avatar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.avatar-img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: transparent;
+    padding: 0;
+    display: block;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+    border: none;
+}
+
+.avatar-img {
+    transition: transform 0.25s ease;
+}
+
+.avatar-img:hover {
+    transform: scale(1.05);
+}
+
+/* ============================= */
+/* SKILLS */
+/* ============================= */
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.skill-tag {
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* ============================= */
+/* SECTION TOGGLE HEADER */
+/* ============================= */
+
+.btn-section-header-tech {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: #ffffff;
+    transition: all 0.2s ease;
+}
+
+.btn-section-header-tech:hover {
+    background: rgba(255, 255, 255, 0.09);
+    transform: translateY(-2px);
+}
+
+.active-header {
+    background: rgba(79, 70, 229, 0.3) !important;
+    border-color: rgba(79, 70, 229, 0.6) !important;
+}
+
+/* ============================= */
+/* EXPERIENCE */
+/* ============================= */
+
+.experience-tech h3 {
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+
+.tech-badge {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 5px 12px;
+    border-radius: 999px;
+    font-size: 0.75rem;
+}
+
+.profile-p {
+    line-height: 1.8;
+    font-size: 1rem;
+}
+
+/* ============================= */
+/* LINKS / SOCIAL */
+/* ============================= */
+
+.social-icon {
+    color: #ffffff;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.15);
+    color: #93c5fd;
+}
+
+/* ============================= */
+/* BACK BUTTON */
+/* ============================= */
+
+.btn-back {
+    border-radius: 999px;
+    padding: 8px 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: transparent;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.btn-back:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+}

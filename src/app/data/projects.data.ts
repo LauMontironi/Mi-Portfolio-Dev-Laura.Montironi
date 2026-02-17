@@ -111,4 +111,13 @@ export const PROJECTS: Project[] = [
   //   blogUrl: "https://dev.to/laumontironi/parte-2-del-caos-al-click-mental-conectar-angular-con-el-mundo-real-y-sobrevivir-55fc",
   //   liveUrl: "https://family-scheduler-front.netlify.app/"
   // }
+{
+  id: 13,
+  title: "🥗 UpgradeFood: End-to-End Restaurant Management System",
+  description: "Aplicación full-stack con Angular + FastAPI (async) que integra autenticación JWT con control de roles, reservas online con emails transaccionales, MySQL en Aiven (SSL), despliegue en Render y almacenamiento multimedia en Cloudinary.",
+  imageUrl: "assets/projects/upgrade_food.jpg",
+  githubUrl: "https://github.com/LauMontironi/UpgradeHub_final_project_Backend",
+  blogUrl: "https://dev.to/laumontironi/el-dia-que-deje-de-practicar-y-empece-a-programar-de-verdad-1b6k",
+  liveUrl: "https://upgradefood.web.app/"
+},
 ];

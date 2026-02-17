@@ -84,12 +84,12 @@
         }
     </div>
 
-    <!-- ✅ AQUÍ empieza la parte que estaba duplicada. Ahora va limpia -->
+
     <section class="container mt-5">
         <div class="section-wrapper">
             <button (click)="toggle(4)" class="btn-section-header-tech" [class.active-header]="activeSection === 4">
                 <div class="header-content">
-                    <img src="assets/images/thinking.jpg" alt="Lau-thinking" class="header-avatar">
+                    <img src="assets/images/thinking.png" alt="Lau-thinking" class="header-avatar">
                     <span>PROFILE</span>
                 </div>
                 <i class="bi" [class.bi-chevron-down]="activeSection !== 4"
@@ -98,7 +98,7 @@
 
             @if (activeSection === 4) {
             <div class="card-tech-content animate__animated animate__fadeIn">
-                <p class="profile-p">
+                <!-- <p class="profile-p">
                     I'm a Full Stack Developer with a solid background in Finance, which gives me a unique perspective
                     on business logic and
                     system efficiency. I'm currently pursuing an intensive Bootcamp to consolidate my technical skills
@@ -116,7 +116,40 @@
                     career switch to tech, I actively document my learning journey and projects on my personal blog,
                     demonstrating my
                     commitment to continuous growth.
+                </p> -->
+
+                <p>
+                    I am a Full Stack Developer with a solid background in Finance and over a decade of professional experience in
+                    structured, high-responsibility environments. At 38, and as a mother of three, I made a deliberate and determined
+                    transition into tech — fully aware of the challenge and fully committed to mastering it.
                 </p>
+                
+                <p>
+                    I design and build end-to-end applications using Angular (Standalone Components and Signals) and FastAPI with SQL,
+                    focusing on clean architecture, secure authentication (JWT + Argon2), and well-structured relational data models. I
+                    have developed full-stack systems with role-based access control, ownership validation, and real deployment
+                    environments.
+                </p>
+                
+                <p>
+                    My previous career in finance strengthened my analytical thinking, precision, and problem-solving skills — qualities
+                    I now apply to software development. I learn fast, adapt quickly, and approach complex problems with structure and
+                    determination.
+                </p>
+                
+                <p>
+                    I actively document my journey, projects, and technical growth on my personal blog, not only as a learning tool but
+                    as proof of consistency, discipline, and long-term commitment.
+                </p>
+                
+                <p>
+                    I don’t just study development — I build, iterate, and improve continuously.
+                </p>
+
+                 
+                
+
+                
 
                 <div class="text-center">
                     <a class="btn-journey"
@@ -133,7 +166,7 @@
         <div class="section-wrapper mt-4">
             <button (click)="toggle(5)" class="btn-section-header-tech" [class.active-header]="activeSection === 5">
                 <div class="header-content">
-                    <img src="assets/images/experience.jpg" alt="Lau-working" class="header-avatar">
+                    <img src="assets/images/experience.png" alt="Lau-working" class="header-avatar">
                     <span>PROF. EXPERIENCE</span>
                 </div>
                 <i class="bi" [class.bi-chevron-down]="activeSection !== 5"
@@ -142,40 +175,78 @@
 
             @if (activeSection === 5) {
             <div class="card-tech-content animate__animated animate__fadeIn">
-                <article class="experience-tech">
-                    <div class="d-flex justify-content-between align-items-start flex-wrap">
-                        <h3>FULL STACK DEVELOPER (Freelance & Academic)</h3>
-                        <span class="tech-badge">Sept 2025 – Present</span>
+                <article class="exp-article">
+                
+                    <h3>Full Stack Developer (Freelance & Academic)</h3>
+                    <p class="exp-meta">
+                        <span class="meta-label">Sept 2025 – Present</span> | Barcelona / Remote
+                    </p>
+                
+                    <p>
+                        Designing and building end-to-end full-stack applications with a strong focus on
+                        scalable architecture, security, and production-ready deployment.
+                    </p>
+                
+                    <h4>Project Highlights</h4>
+                
+                    <!-- Family Scheduler -->
+                    <div class="project-highlight">
+                        <h5>🔹 Family Scheduler – Full-Stack Event Management Platform</h5>
+                        <ul>
+                            <li>
+                                Designed and developed a secure REST API using <strong>FastAPI + MySQL</strong>,
+                                implementing JWT authentication and Argon2 password hashing.
+                            </li>
+                            <li>
+                                Modeled relational database structures to manage multi-family hierarchies,
+                                user roles (Admin/Parent), and event ownership logic.
+                            </li>
+                            <li>
+                                Built a modern frontend using
+                                <strong>
+                                    Angular Standalone Components, Signals,
+                                    and modern control flow (&#64;if, &#64;for)
+                                </strong>.
+                            </li>
+                            <li>
+                                Deployed production environments (Frontend on Vercel, Backend + DB on Railway)
+                                with proper environment configuration and CORS handling.
+                            </li>
+                        </ul>
                     </div>
-
-                    <p class="location-tech"><i class="bi bi-geo-fill text-danger"></i> Barcelona / Remote</p>
-
-                    <ul class="mt-3">
-                        <li>
-                            <strong>Full Stack Development:</strong> Designing and building end-to-end applications
-                            using <b>Angular 17+</b> (Frontend)
-                            and <b>FastAPI</b> (Backend), ensuring seamless integration between client and server.
-                        </li>
-
-                        <li class="mt-3">
-                            <strong>Project Highlight - Family Scheduler:</strong>
-                            <ul>
-                                <li>Developed a secure <b>REST API</b> with <b>Python</b> and <b>MySQL</b>, implementing
-                                    <b>JWT authentication</b> and password hashing (Argon2) for data privacy.</li>
-                                <li>Built a modern UI using <b>Angular Standalone Components</b> and <b>Signals</b> for
-                                    optimized state management and reactivity.</li>
-                                <li>Managed complex relational databases to handle multi-family hierarchies, roles
-                                    (Admin/Parent), and event scheduling.</li>
-                                <li>Deployed and configured CI/CD environments using <b>Netlify</b> (Frontend) and
-                                    <b>Render</b> (Backend/DB).</li>
-                            </ul>
-                        </li>
-
-                        <li class="mt-3">
-                            <strong>Core Tech Stack:</strong> HTML5, CSS3, JavaScript (ES6+), TypeScript, Angular,
-                            Python, FastAPI, MySQL, and Git for version control.
-                        </li>
-                    </ul>
+                
+                    <!-- UpgradeFood -->
+                    <div class="project-highlight">
+                        <h5>🔹 UpgradeFood – End-to-End Restaurant Management System</h5>
+                        <ul>
+                            <li>
+                                Developed a complete full-stack restaurant system integrating
+                                <strong>Angular (Frontend)</strong> with <strong>FastAPI (async) backend</strong>.
+                            </li>
+                            <li>
+                                Implemented role-based access control (Admin/User) with secure authentication
+                                and protected routes.
+                            </li>
+                            <li>
+                                Built reservation management, dynamic menus, and transactional email workflows.
+                            </li>
+                            <li>
+                                Integrated third-party services including Render, Cloudinary,
+                                and MySQL cloud hosting.
+                            </li>
+                            <li>
+                                Improved backend performance using async database connections and
+                                modular architecture (routes → services → controllers).
+                            </li>
+                        </ul>
+                    </div>
+                
+                    <h4>Core Technical Stack</h4>
+                    <p>
+                        HTML5, CSS3, JavaScript (ES6+), TypeScript, Angular 17+, Python,
+                        FastAPI, MySQL, REST APIs, JWT Authentication, Git, Cloud Deployment.
+                    </p>
+                
                 </article>
             </div>
             }

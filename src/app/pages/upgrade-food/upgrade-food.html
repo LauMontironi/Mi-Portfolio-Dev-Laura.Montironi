@@ -1,0 +1,103 @@
+<div class="project-page container py-5 animate__animated animate__fadeIn">
+
+    <header class="text-center mb-5">
+        <span class="badge bg-primary mb-2">Full Stack Project</span>
+        <h1 class="display-4 fw-bold">🥗 UpgradeFood</h1>
+
+        <p class="lead text-muted mx-auto" style="max-width: 760px;">
+            Plataforma full-stack para gestión real de restaurante: reservas online, menús, reseñas y panel
+            administrativo,
+            conectando Angular + FastAPI + MySQL en la nube con integraciones externas.
+        </p>
+
+        <div class="d-flex flex-column flex-md-row justify-content-center gap-3 mt-4 px-3">
+            <a href="https://upgradefood.web.app/" target="_blank" class="btn btn-dark px-4" rel="noopener">
+                <i class="bi bi-rocket-takeoff"></i> Live Demo
+            </a>
+            <a href="https://github.com/LauMontironi/UpgradeHub_final_project_Frontend" target="_blank"
+                class="btn btn-outline-dark px-4" rel="noopener">
+                <i class="bi bi-github"></i> Frontend Code
+            </a>
+            <a href="https://github.com/LauMontironi/UpgradeHub_final_project_Backend" target="_blank"
+                class="btn btn-outline-dark px-4" rel="noopener">
+                <i class="bi bi-github"></i> Backend Code
+            </a>
+        </div>
+    </header>
+
+    <section class="mb-5">
+        <h2 class="fw-bold mb-3">Qué es</h2>
+        <p>
+            UpgradeFood simula la operativa real de un restaurante: el cliente consulta menús, realiza reservas y
+            publica reseñas;
+            el administrador gestiona menús, platos, mesas y la actividad global desde un panel completo.
+        </p>
+    </section>
+
+    <section class="mb-5">
+        <h2 class="fw-bold mb-3">Funcionalidades clave</h2>
+        <ul class="mb-0">
+            <li>Registro/Login con JWT + hashing Argon2</li>
+            <li>Roles (admin/cliente) + permisos por ownership</li>
+            <li>Reservas online (crear/cancelar) + panel admin para gestión completa</li>
+            <li>Emails transaccionales automáticos con Resend</li>
+            <li>Imágenes en Cloudinary (guardando URL en BD)</li>
+            <li>Panel de usuario: editar datos + cambiar contraseña</li>
+        </ul>
+    </section>
+
+    <section class="mb-5">
+        <h2 class="fw-bold mb-3">Stack & Arquitectura</h2>
+        <div class="row g-3">
+            <div class="col-md-6">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-body">
+                        <h5 class="fw-bold mb-2">Frontend</h5>
+                        <p class="mb-0">
+                            Angular (standalone components, signals, guards e interceptor JWT) + Bootstrap.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-body">
+                        <h5 class="fw-bold mb-2">Backend</h5>
+                        <p class="mb-0">
+                            FastAPI async (aiomysql) + Pydantic + arquitectura por capas (routes/controllers/services).
+                            MySQL en Aiven con SSL.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mb-5">
+        <h2 class="fw-bold mb-3">Screenshots</h2>
+        <div class="row g-3">
+            <div class="col-md-6">
+                <img src="assets/projects/Panel-admin.jpg" class="img-fluid rounded-3 shadow border" alt="">
+            </div>
+            <div class="col-md-6">
+                <img src="assets/projects/platos.jpg" class="img-fluid rounded-3 shadow border" alt="">
+            </div>
+            <div class="col-md-6">
+                <img src="assets/projects/vista-menus.jpg" class="img-fluid rounded-3 shadow border" alt="">
+            </div>
+            <div class="col-md-6">
+                <img src="assets/projects/panel-usuario.jpg" class="img-fluid rounded-3 shadow border" alt="">
+            </div>
+            <div class="col-md-6">
+                <img src="assets/projects/resenas.jpg" class="img-fluid rounded-3 shadow border" alt="">
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-center py-4 border-top">
+        <button routerLink="/" class="btn btn-outline-dark btn-sm rounded-pill px-4">
+            <i class="bi bi-arrow-left"></i> Volver al Portfolio
+        </button>
+    </footer>
+
+</div>
