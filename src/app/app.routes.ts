@@ -1,17 +1,30 @@
 import { Routes } from '@angular/router';
 
-import { HomeComponent } from './pages/home/home';
-import { CvTech } from './pages/cv-tech/cv-tech';
-import { CvFinance } from './pages/cv-finance/cv-finance';
-import { FamilySchedule } from './pages/family-schedule/family-schedule';
-import { UpgradeFood } from './pages/upgrade-food/upgrade-food';
-
 export const routes: Routes = [
-  { path: '', pathMatch: 'full', component: HomeComponent },
-  { path: 'cv-tech', component: CvTech },
-  { path: 'cv-finance', component: CvFinance },
-  { path: 'family-schedule', component: FamilySchedule },
-  { path: 'upgrade-food', component: UpgradeFood },
+  { 
+    path: '', 
+    pathMatch: 'full', 
+    loadComponent: () => import('./pages/home/home').then(m => m.HomeComponent) 
+  },
+  { 
+    path: 'cv-tech', 
+    loadComponent: () => import('./pages/cv-tech/cv-tech').then(m => m.CvTech) 
+  },
+  { 
+    path: 'cv-finance', 
+    loadComponent: () => import('./pages/cv-finance/cv-finance').then(m => m.CvFinance) 
+  },
+  { 
+    path: 'family-schedule', 
+    loadComponent: () => import('./pages/family-schedule/family-schedule').then(m => m.FamilySchedule) 
+  },
+  { 
+    path: 'upgrade-food', 
+    loadComponent: () => import('./pages/upgrade-food/upgrade-food').then(m => m.UpgradeFood) 
+  },
+  { 
+    path: 'saas-cursos-online', 
+    loadComponent: () => import('./pages/saas-cursos-online/saas-cursos-online').then(m => m.SaasCursosOnline) 
+  },
   { path: '**', redirectTo: '' }
 ];
-

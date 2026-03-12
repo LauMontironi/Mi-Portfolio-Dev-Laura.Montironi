@@ -119,5 +119,14 @@ export const PROJECTS: Project[] = [
   githubUrl: "https://github.com/LauMontironi/UpgradeHub_final_project_Backend",
   blogUrl: "https://dev.to/laumontironi/el-dia-que-deje-de-practicar-y-empece-a-programar-de-verdad-1b6k",
   liveUrl: "https://upgradefood.web.app/"
-},
+  },
+  {
+  id: 14,
+  title: "🎓 SaaS LMS: Learning Platform with Student & Admin Panels",
+  description: "Plataforma full-stack de cursos online con Angular + FastAPI + PostgreSQL. Incluye autenticación JWT, dashboard de alumno, course detail con progreso, panel admin con CRUD de cursos y lessons, y despliegue del backend en Railway.",
+  imageUrl: "assets/projects/Saas1.jpg",
+  githubUrl: "https://github.com/LauMontironi/SaaS-LMS-Backend-FastAPI-PostgreSQL",
+  blogUrl: "https://mi-camino-dev-blog.vercel.app/blog/19-post/",
+  // liveUrl: "https://saascourseflow.netlify.app/landing"
+}
 ];

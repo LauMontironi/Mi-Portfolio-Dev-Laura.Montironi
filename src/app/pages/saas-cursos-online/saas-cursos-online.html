@@ -1,0 +1,300 @@
+<div class="project-page container py-5 animate__animated animate__fadeIn">
+
+    <header class="text-center mb-5">
+        <span class="badge bg-primary mb-2">Full Stack Project</span>
+        <h1 class="display-4 fw-bold">🎓 SaaS LMS Platform</h1>
+
+        <p class="lead text-muted mx-auto" style="max-width: 760px;">
+            Plataforma full-stack de cursos online con panel de alumno y panel admin,
+            conectando Angular + FastAPI + PostgreSQL en una arquitectura real orientada a producto.
+        </p>
+
+        <div class="d-flex flex-column flex-md-row justify-content-center gap-3 mt-4 px-3">
+            <!-- <a href="https://saascourseflow.netlify.app" target="_blank" class="btn btn-dark px-4" rel="noopener">
+                <i class="bi bi-rocket-takeoff"></i> Live Demo
+            </a> -->
+            <button type="button" class="btn btn-dark px-4" (click)="showComingSoon()">
+                <i class="bi bi-play-circle"></i> Video Demo
+            </button>
+            <a href="https://github.com/LauMontironi/SaaS-LMS-Frontend-FastAPI-PostgreSQL" target="_blank"
+                class="btn btn-outline-dark px-4" rel="noopener">
+                <i class="bi bi-github"></i> Frontend Code
+            </a>
+            <a href="https://github.com/LauMontironi/SaaS-LMS-Backend-FastAPI-PostgreSQL" target="_blank"
+                class="btn btn-outline-dark px-4" rel="noopener">
+                <i class="bi bi-github"></i> Backend Code
+            </a>
+            <a href="https://saas-lms-backend-fastapi-postgresql-production.up.railway.app/docs" target="_blank"
+                class="btn btn-outline-dark px-4" rel="noopener">
+                <i class="bi bi-code-slash"></i> API Docs
+            </a>
+        </div>
+    </header>
+
+    <section class="mb-5">
+        <h2 class="fw-bold mb-3">Qué es</h2>
+        <p>
+            SaaS LMS es una plataforma de aprendizaje online donde un estudiante puede registrarse,
+            iniciar sesión, explorar cursos, inscribirse, seguir su progreso y marcar lecciones como completadas.
+            Un administrador puede gestionar cursos y lessons desde un panel interno con estadísticas reales.
+        </p>
+    </section>
+
+    <section class="mb-5">
+        <h2 class="fw-bold mb-3">Funcionalidades clave</h2>
+        <div class="row g-3">
+            <div class="col-md-6">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="fw-bold mb-3">👩‍🎓 Panel de alumno</h5>
+                        <ul class="mb-0">
+                            <li>Registro y login con JWT + hashing de contraseñas</li>
+                            <li>Dashboard con cursos recomendados, trending y catálogo completo</li>
+                            <li>Continue learning con progreso real</li>
+                            <li>Enroll en cursos con un click</li>
+                            <li>Course detail con video embebido y listado de lessons</li>
+                            <li>Marcar lecciones como completadas / pendientes</li>
+                            <li>Barra de progreso por curso</li>
+                            <li>Perfil con datos del usuario y cursos inscritos</li>
+                            <li>Avatar por URL con fallback a iniciales</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="fw-bold mb-3">🛠️ Panel de admin</h5>
+                        <ul class="mb-0">
+                            <li>Acceso protegido por rol (solo admins)</li>
+                            <li>Stats generales de la plataforma</li>
+                            <li>CRUD completo de cursos</li>
+                            <li>CRUD de lessons por curso</li>
+                            <li>Badges de estado, nivel y featured en tabla</li>
+                            <li>Redirección automática según role al hacer login</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mb-5">
+        <h2 class="fw-bold mb-3">Stack & Arquitectura</h2>
+        <div class="row g-3">
+            <div class="col-md-6">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="fw-bold mb-2">🅰️ Frontend — Angular 21</h5>
+                        <ul class="mb-0">
+                            <li>Standalone components + signals + computed()</li>
+                            <li>Lazy loading por ruta</li>
+                            <li>Interceptor JWT automático</li>
+                            <li>Guards por autenticación y por rol</li>
+                            <li>PrimeNG UI + skeletons de carga</li>
+                            <li>Animaciones CSS en cards y secciones</li>
+                            <li>Desplegado en Netlify</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="fw-bold mb-2">🐍 Backend — FastAPI</h5>
+                        <ul class="mb-0">
+                            <li>FastAPI async + SQLAlchemy + PostgreSQL</li>
+                            <li>Pydantic para validación y schemas</li>
+                            <li>Arquitectura por capas: routes / controllers / schemas / models</li>
+                            <li>Endpoints de enrollment y lesson progress</li>
+                            <li>Auth con JWT + bcrypt</li>
+                            <li>Desplegado en Railway</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mb-5">
+        <h2 class="fw-bold mb-3">Endpoints principales</h2>
+        <div class="endpoint-grid">
+
+            <div class="endpoint-card">
+                <div class="endpoint-head">
+                    <span class="endpoint-badge endpoint-badge--blue">Auth</span>
+                    <span class="endpoint-title">Autenticación</span>
+                </div>
+                <div class="endpoint-body">
+                    <div class="endpoint-row">
+                        <span class="method method--post">POST</span>
+                        <code>/auth/register</code>
+                    </div>
+                    <div class="endpoint-row">
+                        <span class="method method--post">POST</span>
+                        <code>/auth/login</code>
+                    </div>
+                    <div class="endpoint-row">
+                        <span class="method method--get">GET</span>
+                        <code>/users/me</code>
+                    </div>
+                </div>
+            </div>
+
+            <div class="endpoint-card">
+                <div class="endpoint-head">
+                    <span class="endpoint-badge endpoint-badge--green">Courses</span>
+                    <span class="endpoint-title">Cursos</span>
+                </div>
+                <div class="endpoint-body">
+                    <div class="endpoint-row">
+                        <span class="method method--get">GET</span>
+                        <code>/courses</code>
+                    </div>
+                    <div class="endpoint-row">
+                        <span class="method method--get">GET</span>
+                        <code>/courses/{{ '{' }}id{{ '}' }}</code>
+                    </div>
+                    <div class="endpoint-row">
+                        <span class="method method--post">POST</span>
+                        <code>/courses/{{ '{' }}id{{ '}' }}/enroll</code>
+                    </div>
+                </div>
+            </div>
+
+            <div class="endpoint-card">
+                <div class="endpoint-head">
+                    <span class="endpoint-badge endpoint-badge--amber">Dashboard</span>
+                    <span class="endpoint-title">Dashboard alumno</span>
+                </div>
+                <div class="endpoint-body">
+                    <div class="endpoint-row">
+                        <span class="method method--get">GET</span>
+                        <code>/dashboard</code>
+                    </div>
+                    <div class="endpoint-row">
+                        <span class="method method--get">GET</span>
+                        <code>/dashboard/stats</code>
+                    </div>
+                </div>
+            </div>
+
+            <div class="endpoint-card">
+                <div class="endpoint-head">
+                    <span class="endpoint-badge endpoint-badge--purple">Progress</span>
+                    <span class="endpoint-title">Progreso de lecciones</span>
+                </div>
+                <div class="endpoint-body">
+                    <div class="endpoint-row">
+                        <span class="method method--post">POST</span>
+                        <code>/lessons/{{ '{' }}id{{ '}' }}/complete</code>
+                    </div>
+                    <div class="endpoint-row">
+                        <span class="method method--delete">DELETE</span>
+                        <code>/lessons/{{ '{' }}id{{ '}' }}/complete</code>
+                    </div>
+                </div>
+            </div>
+
+            <div class="endpoint-card">
+                <div class="endpoint-head">
+                    <span class="endpoint-badge endpoint-badge--pink">Admin</span>
+                    <span class="endpoint-title">Panel admin</span>
+                </div>
+                <div class="endpoint-body">
+                    <div class="endpoint-row">
+                        <span class="method method--post">POST</span>
+                        <code>/courses</code>
+                    </div>
+                    <div class="endpoint-row">
+                        <span class="method method--post">PUT</span>
+                        <code>/courses/{{ '{' }}id{{ '}' }}</code>
+                    </div>
+                    <div class="endpoint-row">
+                        <span class="method method--delete">DELETE</span>
+                        <code>/courses/{{ '{' }}id{{ '}' }}</code>
+                    </div>
+                </div>
+            </div>
+
+            <div class="endpoint-card">
+                <div class="endpoint-head">
+                    <span class="endpoint-badge endpoint-badge--gray">Lessons</span>
+                    <span class="endpoint-title">Lecciones (admin)</span>
+                </div>
+                <div class="endpoint-body">
+                    <div class="endpoint-row">
+                        <span class="method method--post">POST</span>
+                        <code>/lessons</code>
+                    </div>
+                    <div class="endpoint-row">
+                        <span class="method method--post">PUT</span>
+                        <code>/lessons/{{ '{' }}id{{ '}' }}</code>
+                    </div>
+                    <div class="endpoint-row">
+                        <span class="method method--delete">DELETE</span>
+                        <code>/lessons/{{ '{' }}id{{ '}' }}</code>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="mb-5">
+        <h2 class="fw-bold mb-3">Decisiones técnicas interesantes</h2>
+        <ul class="mb-0">
+            <li>Separación clara entre panel de alumno y panel admin mediante guards por rol</li>
+            <li>Redirección del frontend según el <code>role</code> real obtenido desde <code>/users/me</code> al hacer
+                login</li>
+            <li>Signals y computed() de Angular 21 en lugar de RxJS para estado local</li>
+            <li>Skeletons de carga en todas las páginas para mejorar UX percibida</li>
+            <li>Continue learning incluye cursos con 0% de progreso (recién inscritos)</li>
+            <li>Progreso calculado en backend en base a lecciones completadas / total</li>
+            <li>Interceptor JWT automático — no hay que añadir headers manualmente en cada llamada</li>
+        </ul>
+    </section>
+
+    <section class="mb-5">
+        <h2 class="fw-bold mb-3">Lo que aprendí construyéndolo</h2>
+        <p>
+            Este proyecto me ayudó a trabajar con una arquitectura full-stack mucho más real:
+            no solo crear vistas, sino conectar auth, backend, base de datos, paneles por rol,
+            lógica de negocio y gestión de contenido desde cero.
+        </p>
+        <p class="mb-0">
+            También fue una buena práctica para pasar de pantallas mockeadas a pantallas conectadas
+            de verdad, mantener componentes reutilizables y trabajar con un flujo más cercano al de un producto real.
+            Aprendí a gestionar estado con signals, a proteger rutas por rol tanto en frontend como en backend,
+            y a estructurar una API con capas bien separadas.
+        </p>
+    </section>
+
+    <section class="mb-5">
+        <h2 class="fw-bold mb-3">Screenshots</h2>
+        <div class="row g-3">
+            <div class="col-md-6">
+                <img src="assets/projects/saas3.jpg" class="img-fluid rounded-3 shadow border" alt="Landing page LMS">
+            </div>
+            <div class="col-md-6">
+                <img src="assets/projects/saas2.jpg" class="img-fluid rounded-3 shadow border" alt="Dashboard alumno">
+            </div>
+            <div class="col-md-6">
+                <img src="assets/projects/saas5.jpg" class="img-fluid rounded-3 shadow border" alt="Course detail">
+            </div>
+            <div class="col-md-6">
+                <img src="assets/projects/saas6.jpg" class="img-fluid rounded-3 shadow border" alt="Admin dashboard">
+            </div>
+            <div class="col-md-6">
+                <img src="assets/projects/saas8.jpg" class="img-fluid rounded-3 shadow border" alt="Admin courses">
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-center py-4 border-top">
+        <button routerLink="/" class="btn btn-outline-dark btn-sm rounded-pill px-4">
+            <i class="bi bi-arrow-left"></i> Volver al Portfolio
+        </button>
+    </footer>
+
+</div>

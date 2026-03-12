@@ -1,0 +1,208 @@
+/* ============================= */
+/* PROJECT PAGE (shared style) */
+/* ============================= */
+
+.project-page {
+    color: rgba(229, 231, 235, 0.92);
+}
+
+.project-page h1,
+.project-page h2,
+.project-page h3,
+.project-page h4,
+.project-page .fw-bold {
+    color: #fff;
+}
+
+.project-page .text-muted,
+.project-page .lead.text-muted {
+    color: rgba(229, 231, 235, 0.72) !important;
+}
+
+.project-page header {
+    padding: 28px 18px;
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    backdrop-filter: blur(10px);
+}
+
+.project-page section {
+    padding: 26px 0;
+}
+
+.project-page .card {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.10) !important;
+    color: rgba(229, 231, 235, 0.92);
+    border-radius: 18px;
+}
+
+.project-page .card .text-muted {
+    color: rgba(229, 231, 235, 0.70) !important;
+}
+
+.project-page ul li {
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+.project-page img {
+    border-radius: 18px !important;
+}
+
+.project-page footer {
+    border-top-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+/* Buttons: que no choquen con el dark */
+.project-page .btn-outline-dark {
+    border-color: rgba(255, 255, 255, 0.22) !important;
+    color: #fff !important;
+}
+
+.project-page .btn-outline-dark:hover {
+    background: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* ============================= */
+/* ENDPOINT CARDS (Family) */
+/* ============================= */
+
+.endpoint-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 18px;
+}
+
+.endpoint-card {
+    grid-column: span 6;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 14px 40px rgba(0, 0, 0, 0.18);
+}
+
+.endpoint-head {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+    background: rgba(0, 0, 0, 0.12);
+}
+
+.endpoint-title {
+    font-weight: 800;
+    color: #fff;
+}
+
+.endpoint-body {
+    padding: 14px 16px 16px;
+}
+
+.endpoint-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.endpoint-row code {
+    color: rgba(229, 231, 235, 0.9);
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    padding: 6px 10px;
+    border-radius: 12px;
+    max-width: 100%;
+    white-space: normal;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+}
+
+.endpoint-text {
+    margin: 0;
+    color: rgba(229, 231, 235, 0.78);
+    line-height: 1.6;
+}
+
+/* METHOD chips */
+.method {
+    font-weight: 800;
+    font-size: 0.75rem;
+    padding: 6px 10px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    background: rgba(255, 255, 255, 0.06);
+    color: #fff;
+    flex: 0 0 auto;
+}
+
+.method--get {
+    background: rgba(59, 130, 246, 0.20);
+    border-color: rgba(59, 130, 246, 0.45);
+}
+
+.method--post {
+    background: rgba(34, 197, 94, 0.20);
+    border-color: rgba(34, 197, 94, 0.45);
+}
+
+.method--delete {
+    background: rgba(239, 68, 68, 0.20);
+    border-color: rgba(239, 68, 68, 0.45);
+}
+
+/* Module badge */
+.endpoint-badge {
+    font-weight: 800;
+    font-size: 0.72rem;
+    padding: 6px 10px;
+    border-radius: 999px;
+    color: #111;
+    background: #fff;
+    flex: 0 0 auto;
+}
+
+.endpoint-badge--green {
+    background: #34d399;
+}
+
+.endpoint-badge--amber {
+    background: #fbbf24;
+}
+
+.endpoint-badge--blue {
+    background: #60a5fa;
+}
+
+.endpoint-badge--purple {
+    background: #a78bfa;
+}
+
+.endpoint-badge--gray {
+    background: #e5e7eb;
+}
+
+.endpoint-badge--pink {
+    background: #f9a8d4;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .endpoint-card {
+        grid-column: span 12;
+    }
+}
+
+/* Responsive tightening */
+@media (max-width: 768px) {
+    .project-page header {
+        padding: 22px 14px;
+    }
+
+    .project-page .btn {
+        width: 100%;
+    }
+}

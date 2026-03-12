@@ -1,56 +1,106 @@
-🚀 Full Stack Journey: Portfolio & Dev Log
-¡Bienvenida/o a mi ecosistema digital! 🌐 Este repositorio es mucho más que un portafolio; es la bitácora viva de mi evolución como Desarrolladora Full Stack. Aquí documento mi transición desde el sector financiero hacia la arquitectura de software, enfrentando retos reales y construyendo soluciones escalables día a día.
+# 🌐 Laura Montironi — Developer Portfolio
 
-"Mi objetivo: Transformar la lógica de negocio en experiencias digitales eficientes y escalables."
+A personal portfolio built with Angular, documenting my journey from self-taught developer to full stack engineer.
 
-👤 Sobre Mí: Laura Montironi
-Desarrolladora Full Stack con mentalidad de analista financiera. Aporto una visión de negocio única a la programación, priorizando la eficiencia del sistema y la limpieza del código.
+---
 
-Aprendizaje Activo: Documento cada bug resuelto como una lección aprendida.
+## 🧭 The story behind this portfolio
 
-Divulgadora Tech: Comparto mi proceso en Dev.to para ayudar a otros desarrolladores que empiezan desde cero.
-Blog: [https://mi-camino-dev-blog.vercel.app/]
+This portfolio didn't start as an Angular app.
 
-🛠️ Stack Tecnológico
-He seleccionado un stack moderno que me permite construir desde la lógica del servidor hasta interfaces de usuario dinámicas:
+It started as a simple HTML + CSS page — my first real project, built before I had any formal training. Just a static page to put something out there, learn the basics, and have a place to show my work.
 
-Área Tecnologías Clave
-Frontend HTML5, CSS3 (Bootstrap), JavaScript (ES6+), Angular (Framework principal)
-Backend Python (FastAPI para desarrollo de APIs RESTful)
-Bases de Datos SQL (MySQL) y NoSQL (MongoDB)
-Herramientas Git/GitHub, Netlify (para despliegues), VS Code
+As I kept learning — JavaScript, then Angular, then FastAPI and PostgreSQL — the portfolio grew with me. Each time I learned something new, I rebuilt or added to it. The HTML/CSS became a component-based Angular app. The static links became lazy-loaded routes. The single page became a multi-section portfolio with CVs, project pages and a dark theme.
 
-🗺️ Estructura del Ecosistema
-Mis proyectos se dividen en pilares fundamentales que demuestran mi versatilidad:
+It's not a portfolio _about_ my journey — it _is_ my journey, committed to GitHub one push at a time.
 
-⚡ Lógica & Backend (Python / FastAPI)
-Arquitectura RESTful: Creación de APIs seguras y eficientes.
+---
 
-Integración de Datos: Consumo de APIs externas (ej. CoinGecko) y persistencia en bases de datos.
+## ✨ What's inside
 
-Seguridad: Implementación de autenticación JWT y hashing de contraseñas.
+- **About** — intro, tech stack, links to GitHub, LinkedIn and blog
+- **Star Projects** — featured full stack projects with tech stack and links
+- **Projects grid** — all projects built during bootcamp with image, description and links
+- **CV** — two versions: Tech CV and Financial CV (previous career in Finance)
+- **Contact** — direct email link
+- **Project detail pages** — deep dives into each major project
 
-🎨 Web & Frontend (Angular)
-Interfaces Reactivas: Uso de Angular Signals y componentes independientes.
+---
 
-UX/UI: Diseños responsive enfocados en la experiencia del usuario final.
+## 🚀 Featured Projects
 
-SPA: Gestión avanzada de rutas y estados globales.
+### 🎓 SaaS LMS Platform
 
-🗄️ Gestión de Datos (SQL & NoSQL)
-Diseño de esquemas relacionales en MySQL para integridad de datos y colecciones flexibles en MongoDB.
+Full stack learning management system with student dashboard, admin panel, JWT auth, course enrollment and lesson progress tracking.
 
-Cada commit es una lección aprendida y un paso más en mi desarrollo profesional.
+- **Frontend**: Angular 21 + PrimeNG → [Netlify](https://saascourseflow.netlify.app)
+- **Backend**: FastAPI + PostgreSQL → [Railway](https://saas-lms-backend-fastapi-postgresql-production.up.railway.app/docs)
+- [Frontend repo](https://github.com/LauMontironi/SaaS-LMS-Frontend-FastAPI-PostgreSQL) · [Backend repo](https://github.com/LauMontironi/Saas_cursos_online)
 
-📈 Mi Diario de Aprendizaje
-No solo subo código final; subo procesos. Cada Commit representa un obstáculo superado. Puedes seguir mi evolución técnica paso a paso en mi blog: 👉 Blog: [https://mi-camino-dev-blog.vercel.app/]
+### 🍔 UpgradeFood
 
-✉️ Contacto
+Full stack food platform with FastAPI + Angular + MySQL + Cloudinary + Resend email API.
 
-Estoy lista para aportar valor en entornos de desarrollo ágil y proyectos desafiantes.
+- [Repo](https://github.com/LauMontironi/upgrade-food)
 
-LinkedIn: [www.linkedin.com/in/laura-montironi]
-Email: [lau.montironi@gmail.com]
-GitHub: [LauMontironi]
+### 📅 Family Scheduler
 
-Hecho con ☕ y muchas ganas de aprender por Laura Montironi
+Integral system to sync family schedules, built with FastAPI + Angular + SQL + JWT.
+
+- [Repo](https://github.com/LauMontironi/family-scheduler)
+
+---
+
+## 🛠️ Tech stack
+
+| Layer     | Technologies                                    |
+| --------- | ----------------------------------------------- |
+| Frontend  | Angular 21, TypeScript, Bootstrap, Tailwind CSS |
+| Backend   | Python, FastAPI, SQLAlchemy, Pydantic           |
+| Databases | PostgreSQL, MySQL, MongoDB                      |
+| Auth      | JWT, bcrypt                                     |
+| Tools     | Git, GitHub, VS Code, Postman                   |
+| Deploy    | Netlify, Railway, Vercel                        |
+
+---
+
+## 📁 Project structure
+
+```
+src/
+├── app/
+│   ├── pages/
+│   │   ├── home/               # Main landing page
+│   │   ├── cv-tech/            # Tech CV page
+│   │   ├── cv-finance/         # Finance CV page
+│   │   ├── upgrade-food/       # UpgradeFood project detail
+│   │   ├── family-schedule/    # Family Scheduler project detail
+│   │   └── saas-cursos-online/ # SaaS LMS project detail
+│   ├── app.routes.ts           # Lazy-loaded routes
+│   └── app.component.ts
+```
+
+---
+
+## ⚙️ Run locally
+
+```bash
+git clone https://github.com/LauMontironi/portfolio
+cd portfolio
+npm install
+ng serve
+```
+
+---
+
+## 🔗 Links
+
+- 🌐 Portfolio: [tu-portfolio-url.netlify.app](https://portfoliodev-laumontironi.netlify.app/)
+- 💼 LinkedIn: [linkedin.com/in/laura-montironi](https://www.linkedin.com/in/laura-montironi)
+- 🐙 GitHub: [github.com/LauMontironi](https://github.com/LauMontironi)
+- ✍️ Blog: [mi-camino-dev-blog.vercel.app](https://mi-camino-dev-blog.vercel.app)
+- 📧 Email: lau.montironi@gmail.com
+
+---
+
+_Built with curiosity, rebuilt with knowledge. The loop: Learn. Code. Build. Repeat._

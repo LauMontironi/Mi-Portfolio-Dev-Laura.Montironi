@@ -31,6 +31,13 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#contacto">Contact</a>
                 </li>
+                <!-- <li class="nav-item">
+                    <button type="button" class="theme-toggle" (click)="toggleTheme()"
+                        [title]="isLight ? 'Switch to dark' : 'Switch to light'">
+                        {{ isLight ? '🌙' : '☀️' }}
+                    </button>
+                </li> -->
+
             </ul>
 
         </div>
@@ -167,6 +174,57 @@
                     <button class="btn btn-dark btn-lg">
                         Explore Project <i class="bi bi-arrow-right"></i>
                     </button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section id="featured-project" class="py-0 pb-5">
+    <div class="container">
+
+        <div class="featured-card-wrapper">
+            <div class="featured-badge">New Project</div>
+
+            <div class="row g-0 align-items-center">
+                <div class="col-lg-5">
+                    <div class="featured-image-container">
+                        <img src="assets/projects/saas2.jpg" alt="SaaS LMS preview" class="img-fluid" />
+                    </div>
+                </div>
+
+                <div class="col-lg-7 p-4 p-md-5">
+                    <h3 class="display-6 fw-bold mb-3">🎓 SaaS LMS Platform</h3>
+                    <p class="lead text-muted">
+                        Plataforma de cursos online con Angular + FastAPI + PostgreSQL,
+                        con dashboard de alumno, panel admin y gestión real de cursos y lessons.
+                    </p>
+
+                    <div class="tech-stack-pills mb-4">
+                        <span class="badge rounded-pill bg-primary">Angular</span>
+                        <span class="badge rounded-pill bg-info text-dark">FastAPI</span>
+                        <span class="badge rounded-pill bg-dark">PostgreSQL</span>
+                        <span class="badge rounded-pill bg-secondary">JWT</span>
+                        <span class="badge rounded-pill bg-success">Railway</span>
+                    </div>
+
+                    <div class="d-flex flex-wrap gap-3">
+                        <a routerLink="/saas-cursos-online" class="btn btn-dark btn-lg">
+                            Ver proyecto <i class="bi bi-arrow-right"></i>
+                        </a>
+                        <!-- <a href="https://saascourseflow.netlify.app/landing" target="_blank" rel="noopener"
+                            class="btn btn-outline-light btn-lg">
+                            Live Demo <i class="bi bi-rocket-takeoff"></i>
+                        </a> -->
+                        <button type="button" class="btn btn-dark px-4" (click)="showComingSoon()">
+                            <i class="bi bi-play-circle"></i> Video Demo
+                        </button>
+                        <a href="https://github.com/LauMontironi/SaaS-LMS-Frontend-FastAPI-PostgreSQL" target="_blank"
+                            rel="noopener" class="btn btn-outline-light btn-lg">
+                            GitHub <i class="bi bi-github"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
