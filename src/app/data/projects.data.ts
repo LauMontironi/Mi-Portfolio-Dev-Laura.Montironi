@@ -127,6 +127,6 @@ export const PROJECTS: Project[] = [
   imageUrl: "assets/projects/Saas1.jpg",
   githubUrl: "https://github.com/LauMontironi/SaaS-LMS-Backend-FastAPI-PostgreSQL",
   blogUrl: "https://mi-camino-dev-blog.vercel.app/blog/19-post/",
-  // liveUrl: "https://saascourseflow.netlify.app/landing"
+  liveUrl: "https://go.screenpal.com/watch/cOeoXPnZHfx"
 }
 ];
