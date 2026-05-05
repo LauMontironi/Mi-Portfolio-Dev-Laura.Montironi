@@ -95,7 +95,7 @@ ng serve
 
 ## 🔗 Links
 
-- 🌐 Portfolio: [https://portfoliodev-laumontironi.netlify.app/](https://portfoliodev-laumontironi.netlify.app/)
+- 🌐 Portfolio: [https://mi-portfolio-dev-laura-montironi.vercel.app/](https://mi-portfolio-dev-laura-montironi.vercel.app/)
 - 💼 LinkedIn: [linkedin.com/in/laura-montironi](https://www.linkedin.com/in/laura-montironi)
 - 🐙 GitHub: [github.com/LauMontironi](https://github.com/LauMontironi)
 - ✍️ Blog: [mi-camino-dev-blog.vercel.app](https://mi-camino-dev-blog.vercel.app)
